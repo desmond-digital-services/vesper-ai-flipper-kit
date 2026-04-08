@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Successful - Vesper AI Flipper Kit</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <img src="assets/vesper-logo.svg" alt="Vesper AI" class="logo">
+        </header>
+
+        <main class="success-page">
+            <div class="success-icon">✓</div>
+            <h1>Payment Successful!</h1>
+            <p class="lead">Your Vesper AI Flipper Kit order is confirmed.</p>
+
+            <div class="success-details">
+                <h2>What happens next</h2>
+                <ul>
+                    <li>✓ You'll receive a confirmation email shortly</li>
+                    <li>✓ We'll start building your kit (7-10 days)</li>
+                    <li>✓ You'll get tracking info when it ships</li>
+                    <li>✓ Setup takes 60 seconds once you receive it</li>
+                </ul>
+            </div>
+
+            <div class="timeline">
+                <h2>Order Timeline</h2>
+                <div class="timeline-item">
+                    <div class="timeline-date">Day 0</div>
+                    <div class="timeline-content">Order confirmed, payment received</div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-date">Day 1-2</div>
+                    <div class="timeline-content">Hardware ordered from suppliers</div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-date">Day 3-7</div>
+                    <div class="timeline-content">Kit assembled and tested</div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-date">Day 8-9</div>
+                    <div class="timeline-content">Kit ships with tracking</div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-date">Day 10-12</div>
+                    <div class="timeline-content">Kit arrives at your door</div>
+                </div>
+            </div>
+
+            <div class="support-box">
+                <h2>Questions?</h2>
+                <p>Email us at <a href="mailto:help@vespere.ai">help@vespere.ai</a></p>
+                <p>We typically respond within 24 hours.</p>
+            </div>
+
+            <div class="cta">
+                <a href="index.html" class="btn btn-primary">Return to Home</a>
+            </div>
+        </main>
+
+        <footer>
+            <p>&copy; 2026 Vesper AI. All rights reserved.</p>
+            <p><a href="mailto:help@vespere.ai">help@vespere.ai</a></p>
+        </footer>
+    </div>
+
+    <style>
+        .success-page {
+            text-align: center;
+            padding: 60px 20px;
+        }
+        
+        .success-icon {
+            font-size: 80px;
+            color: #22c55e;
+            margin-bottom: 30px;
+            animation: checkmark 0.6s ease-in-out;
+        }
+        
+        @keyframes checkmark {
+            0% { transform: scale(0); opacity: 0; }
+            50% { transform: scale(1.2); }
+            100% { transform: scale(1); opacity: 1; }
+        }
+        
+        .success-details {
+            background: #f5f5f5;
+            padding: 30px;
+            border-radius: 8px;
+            margin: 40px 0;
+            text-align: left;
+        }
+        
+        .success-details ul {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .success-details li {
+            padding: 10px 0;
+            border-bottom: 1px solid #e0e0e0;
+        }
+        
+        .timeline {
+            margin: 60px 0;
+            text-align: left;
+        }
+        
+        .timeline-item {
+            display: flex;
+            padding: 15px 0;
+            border-left: 3px solid #0066ff;
+            padding-left: 20px;
+            margin-bottom: 15px;
+        }
+        
+        .timeline-date {
+            min-width: 120px;
+            font-weight: 600;
+            color: #0066ff;
+        }
+        
+        .support-box {
+            background: linear-gradient(135deg, #0066ff 0%, #0052cc 100%);
+            color: white;
+            padding: 30px;
+            border-radius: 8px;
+            margin: 40px 0;
+        }
+        
+        .support-box a {
+            color: white;
+            text-decoration: underline;
+        }
+        
+        .cta {
+            margin: 40px 0;
+        }
+    </style>
+</body>
+</html>

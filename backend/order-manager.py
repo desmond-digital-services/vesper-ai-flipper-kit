@@ -11,7 +11,7 @@ from flask import Flask, request, jsonify, g
 from functools import wraps
 
 app = Flask(__name__)
-app.config['DATABASE'] = 'database/vesper_orders.db'
+app.config['DATABASE'] = '../database/vesper_orders.db'
 
 # ============================================
 # DATABASE HELPERS
@@ -36,7 +36,7 @@ def init_db():
     """Initialize database with schema"""
     with app.app_context():
         db = get_db()
-        with open('database/schema.sql', 'r') as f:
+        with open('../database/schema.sql', 'r') as f:
             db.executescript(f.read())
         print("Database initialized successfully")
 

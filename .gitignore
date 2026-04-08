@@ -1,0 +1,53 @@
+# Vesper AI - Git Ignore
+# Prevent committing sensitive files, logs, and local data
+
+# Environment Variables
+.env
+.env.*
+*.env
+.env.local
+.env.production
+
+# SQLite Databases
+*.db
+*.db-shm
+*.db-wal
+database/*.db
+database/*.db-shm
+database/*.db-wal
+
+# Logs
+*.log
+logs/
+*.log.*
+backend/*.log
+backend/webhook.log
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+venv/
+env/
+ENV/
+.venv
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Temporary files
+*.tmp
+*.temp
+.tmp/
