@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vesper AI Admin - Order Management</title>
+    <link rel="stylesheet" href="admin.css">
+</head>
+<body>
+    <!-- Sidebar Navigation -->
+    <aside class="sidebar">
+        <div class="logo">
+            <h1>Vesper AI</h1>
+            <span>Admin Dashboard</span>
+        </div>
+        <nav>
+            <a href="#orders" class="nav-item active" data-view="orders">
+                <span class="icon">📦</span> Orders
+            </a>
+            <a href="#reports" class="nav-item" data-view="reports">
+                <span class="icon">📊</span> Reports
+            </a>
+            <a href="#settings" class="nav-item" data-view="settings">
+                <span class="icon">⚙️</span> Settings
+            </a>
+        </nav>
+        <div class="sidebar-footer">
+            <span id="connection-status">● Connected</span>
+        </div>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Orders View -->
+        <section id="orders-view" class="view active">
+            <header class="view-header">
+                <h2>Orders</h2>
+                <div class="header-actions">
+                    <button class="btn btn-secondary" onclick="exportOrders()">
+                        📥 Export CSV
+                    </button>
+                </div>
+            </header>
+
+            <!-- Filters Bar -->
+            <div class="filters-bar">
+                <div class="filter-group">
+                    <label>Status:</label>
+                    <select id="filter-status" onchange="loadOrders()">
+                        <option value="">All</option>
+                        <option value="pending">Pending</option>
+                        <option value="building">Building</option>
+                        <option value="testing">Testing</option>
+                        <option value="shipped">Shipped</option>
+                        <option value="delivered">Delivered</option>
+                    </select>
+                </div>
+                <div class="filter-group">
+                    <label>Payment:</label>
+                    <select id="filter-payment" onchange="loadOrders()">
+                        <option value="">All</option>
+                        <option value="pending">Pending</option>
+                        <option value="paid">Paid</option>
+                        <option value="failed">Failed</option>
+                    </select>
+                </div>
+                <div class="filter-group search">
+                    <label>Search:</label>
+                    <input type="text" id="search-input" placeholder="Order ID or Email..." onkeyup="handleSearch(event)">
+                    <button class="btn-icon" onclick="loadOrders()">🔍</button>
+                </div>
+            </div>
+
+            <!-- Orders Table -->
+            <div class="table-container">
+                <table class="orders-table">
+                    <thead>
+                        <tr>
+                            <th>Order ID</th>
+                            <th>Customer</th>
+                            <th>Date</th>
+                            <th>Total</th>
+                            <th>Payment</th>
+                            <th>Status</th>
+                            <th>Tracking</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody id="orders-tbody">
+                        <!-- Populated by JS -->
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- Pagination -->
+            <div class="pagination" id="pagination">
+                <!-- Populated by JS -->
+            </div>
+        </section>
+
+        <!-- Order Detail View -->
+        <section id="detail-view" class="view">
+            <header class="view-header">
+                <button class="btn btn-back" onclick="showView('orders')">← Back to Orders</button>
+                <h2 id="detail-order-id">Order Details</h2>
+            </header>
+
+            <div class="detail-grid">
+                <!-- Left Column: Order Info -->
+                <div class="detail-section">
+                    <div class="card">
+                        <h3>Customer Information</h3>
+                        <div id="customer-info" class="info-grid"></div>
+                    </div>
+
+                    <div class="card">
+                        <h3>Shipping Address</h3>
+                        <div id="shipping-info" class="address-block"></div>
+                    </div>
+
+                    <div class="card">
+                        <h3>Payment Details</h3>
+                        <div id="payment-info" class="info-grid"></div>
+                    </div>
+                </div>
+
+                <!-- Right Column: Status & Actions -->
+                <div class="detail-section">
+                    <div class="card status-card">
+                        <h3>Order Status</h3>
+                        <div class="status-display">
+                            <span id="current-status" class="status-badge"></span>
+                        </div>
+                        <div class="status-timeline" id="status-timeline">
+                            <!-- Populated by JS -->
+                        </div>
+                        <div class="status-actions">
+                            <select id="new-status">
+                                <option value="pending">Pending</option>
+                                <option value="building">Building</option>
+                                <option value="testing">Testing</option>
+                                <option value="shipped">Shipped</option>
+                                <option value="delivered">Delivered</option>
+                            </select>
+                            <button class="btn btn-primary" onclick="updateStatus()">Update Status</button>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <h3>Shipping Info</h3>
+                        <div id="shipping-details" class="info-grid"></div>
+                        <div class="tracking-form">
+                            <input type="text" id="tracking-input" placeholder="Tracking Number">
+                            <input type="text" id="carrier-input" placeholder="Carrier" value="USPS">
+                            <button class="btn btn-primary" onclick="addTracking()">Add Tracking</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tabs for Email Log, Procurement, Notes -->
+            <div class="detail-tabs">
+                <button class="tab-btn active" data-tab="emails" onclick="showDetailTab('emails')">Email Log</button>
+                <button class="tab-btn" data-tab="procurement" onclick="showDetailTab('procurement')">Hardware</button>
+                <button class="tab-btn" data-tab="notes" onclick="showDetailTab('notes')">Notes</button>
+            </div>
+
+            <div class="tab-content" id="tab-emails">
+                <div id="email-log" class="log-list"></div>
+            </div>
+
+            <div class="tab-content" id="tab-procurement" style="display:none;">
+                <div class="procurement-section">
+                    <button class="btn btn-secondary" onclick="showAddProcurement()">+ Add Hardware</button>
+                    <div id="procurement-list" class="procurement-grid"></div>
+                </div>
+            </div>
+
+            <div class="tab-content" id="tab-notes" style="display:none;">
+                <div class="notes-section">
+                    <div class="add-note-form">
+                        <textarea id="note-input" placeholder="Add a note..." rows="3"></textarea>
+                        <button class="btn btn-primary" onclick="addNote()">Add Note</button>
+                    </div>
+                    <div id="notes-list" class="notes-timeline"></div>
+                </div>
+            </div>
+
+            <!-- Add Hardware Modal -->
+            <div id="procurement-modal" class="modal" style="display:none;">
+                <div class="modal-content">
+                    <h3>Add Hardware Procurement</h3>
+                    <form id="procurement-form">
+                        <div class="form-group">
+                            <label>Supplier</label>
+                            <select id="proc-supplier" required>
+                                <option value="Micro Center">Micro Center</option>
+                                <option value="Hacker Warehouse">Hacker Warehouse</option>
+                                <option value="Amazon">Amazon</option>
+                                <option value="Other">Other</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label>Item</label>
+                            <select id="proc-item" required>
+                                <option value="Flipper Zero">Flipper Zero</option>
+                                <option value="Moto G Play">Moto G Play</option>
+                                <option value="SD Card 64GB">SD Card 64GB</option>
+                                <option value="SD Card 128GB">SD Card 128GB</option>
+                                <option value="USB Cable">USB Cable</option>
+                                <option value="Other">Other</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label>Cost</label>
+                            <input type="number" id="proc-cost" step="0.01" placeholder="0.00">
+                        </div>
+                        <div class="form-group">
+                            <label>Tracking (optional)</label>
+                            <input type="text" id="proc-tracking" placeholder="Supplier tracking">
+                        </div>
+                        <div class="modal-actions">
+                            <button type="button" class="btn btn-secondary" onclick="closeProcurementModal()">Cancel</button>
+                            <button type="button" class="btn btn-primary" onclick="saveProcurement()">Save</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <!-- Reports View -->
+        <section id="reports-view" class="view">
+            <header class="view-header">
+                <h2>Reports & Analytics</h2>
+            </header>
+
+            <!-- Summary Cards -->
+            <div class="summary-cards">
+                <div class="card metric-card">
+                    <h4>Total Revenue</h4>
+                    <p class="metric-value" id="metric-total">$0</p>
+                </div>
+                <div class="card metric-card">
+                    <h4>Collected</h4>
+                    <p class="metric-value" id="metric-collected">$0</p>
+                </div>
+                <div class="card metric-card">
+                    <h4>Pending</h4>
+                    <p class="metric-value" id="metric-pending">$0</p>
+                </div>
+                <div class="card metric-card">
+                    <h4>Avg Build Time</h4>
+                    <p class="metric-value" id="metric-build-time">0 days</p>
+                </div>
+            </div>
+
+            <!-- Charts Section -->
+            <div class="charts-grid">
+                <div class="card">
+                    <h3>Sales Trend</h3>
+                    <div class="chart-container">
+                        <canvas id="sales-chart"></canvas>
+                    </div>
+                    <div class="period-selector">
+                        <button class="btn-period active" data-period="day" onclick="loadSalesChart('day')">Daily</button>
+                        <button class="btn-period" data-period="week" onclick="loadSalesChart('week')">Weekly</button>
+                        <button class="btn-period" data-period="month" onclick="loadSalesChart('month')">Monthly</button>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <h3>Orders by Status</h3>
+                    <div class="chart-container">
+                        <canvas id="status-chart"></canvas>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <h3>Shipping Performance</h3>
+                    <div id="shipping-stats" class="stats-list"></div>
+                </div>
+
+                <div class="card">
+                    <h3>Monthly Revenue Comparison</h3>
+                    <div class="month-comparison">
+                        <div class="month-stat">
+                            <span class="month-label">This Month</span>
+                            <span class="month-value" id="this-month-rev">$0</span>
+                        </div>
+                        <div class="month-stat">
+                            <span class="month-label">Last Month</span>
+                            <span class="month-value" id="last-month-rev">$0</span>
+                        </div>
+                        <div class="month-change" id="month-change">+0%</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Settings View -->
+        <section id="settings-view" class="view">
+            <header class="view-header">
+                <h2>Settings</h2>
+            </header>
+            <div class="card">
+                <h3>API Configuration</h3>
+                <p>Backend URL: <code id="api-url">http://localhost:5050</code></p>
+                <button class="btn btn-secondary" onclick="testConnection()">Test Connection</button>
+            </div>
+        </section>
+    </main>
+
+    <!-- Toast Notifications -->
+    <div id="toast-container"></div>
+
+    <!-- Loading Overlay -->
+    <div id="loading-overlay" class="loading-overlay" style="display:none;">
+        <div class="spinner"></div>
+        <p>Loading...</p>
+    </div>
+
+    <script src="js/admin.js"></script>
+</body>
+</html>

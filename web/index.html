@@ -1,0 +1,608 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vesper AI Flipper Kit — Security Testing for Everyone</title>
+    <meta name="description" content="Talk to your Flipper Zero in plain English. No coding required. Pre-assembled and ready in 60 seconds.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+    <!-- Stripe.js for checkout -->
+    <script src="https://js.stripe.com/v3/"></script>
+</head>
+<body>
+
+    <!-- ==================== HEADER / NAV ==================== -->
+    <header class="site-header">
+        <div class="container header-inner">
+            <a href="#" class="logo" aria-label="Vesper AI Home">
+                <img src="assets/vesper-logo.svg" alt="Vesper AI" width="140" height="36">
+            </a>
+            <nav class="header-nav" aria-label="Main navigation">
+                <a href="#whats-included">What's Included</a>
+                <a href="#who-its-for">Who It's For</a>
+                <a href="#faq">FAQ</a>
+            </nav>
+            <!-- STRIPE_INTEGRATION_POINT: Primary CTA in nav -->
+            <a href="#checkout" class="btn btn-primary btn-sm" id="nav-checkout-btn">Get the Kit — $499</a>
+        </div>
+    </header>
+
+    <main>
+
+        <!-- ==================== HERO SECTION ==================== -->
+        <section class="hero" id="hero">
+            <div class="container hero-inner">
+                <div class="hero-content">
+                    <div class="hero-badge">
+                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+                            <circle cx="8" cy="8" r="7" stroke="#0066ff" stroke-width="1.5"/>
+                            <path d="M5 8.5L7 10.5L11 6.5" stroke="#0066ff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        <span>Pre-assembled & tested before shipping</span>
+                    </div>
+                    <h1 class="hero-headline">
+                        Security Testing for People Who Don't Know What Sub-GHz Is
+                    </h1>
+                    <p class="hero-subheadline">
+                        Your Flipper Zero, powered by AI. Just ask: <em>"What's this card?"</em>
+                    </p>
+                    <p class="hero-value-prop">
+                        Talk to your hardware in plain English — <strong>60 seconds from box to AI.</strong>
+                    </p>
+                    <div class="hero-cta-group">
+                        <!-- STRIPE_INTEGRATION_POINT: Main purchase button -->
+                        <a href="#checkout" class="btn btn-primary btn-lg" id="hero-checkout-btn">
+                            Get Your Kit — $499
+                        </a>
+                        <div class="trust-indicators">
+                            <span class="trust-item">
+                                <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">
+                                    <path d="M7 1L8.5 5H13L9.5 7.5L11 12L7 9.5L3 12L4.5 7.5L1 5H5.5L7 1Z" fill="#0066ff"/>
+                                </svg>
+                                US-Based Build
+                            </span>
+                            <span class="trust-item">
+                                <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">
+                                    <circle cx="7" cy="7" r="6" stroke="#888" stroke-width="1.2"/>
+                                    <path d="M7 4V7.5L9 9" stroke="#888" stroke-width="1.2" stroke-linecap="round"/>
+                                </svg>
+                                7–10 Day Build Time
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="hero-visual">
+                    <div class="hero-product-image">
+                        <!-- Placeholder product visual — replace with actual product photo -->
+                        <div class="product-placeholder">
+                            <svg width="80" height="80" viewBox="0 0 80 80" fill="none" aria-hidden="true">
+                                <rect x="16" y="12" width="48" height="56" rx="6" fill="#2a2a2a" stroke="#333" stroke-width="1.5"/>
+                                <rect x="22" y="18" width="36" height="28" rx="3" fill="#111"/>
+                                <rect x="28" y="52" width="24" height="8" rx="2" fill="#333"/>
+                                <circle cx="40" cy="32" r="6" fill="#0066ff" opacity="0.4"/>
+                                <path d="M37 32L39.5 34.5L43 30" stroke="#0066ff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                            <p class="placeholder-label">Flipper Zero + Moto G Play</p>
+                            <p class="placeholder-sublabel">Vesper AI app pre-installed</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-wave">
+                <svg viewBox="0 0 1440 80" preserveAspectRatio="none" fill="#1a1a1a" aria-hidden="true">
+                    <path d="M0,40 C240,80 480,0 720,40 C960,80 1200,0 1440,40 L1440,80 L0,80 Z"/>
+                </svg>
+            </div>
+        </section>
+
+        <!-- ==================== BENEFITS SECTION ==================== -->
+        <section class="benefits" id="benefits">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">No Code. No Confusion. Just Results.</h2>
+                    <p class="section-subtitle">Everything you need to test RFID, NFC, and Sub-GHz systems — without touching a command line.</p>
+                </div>
+                <div class="benefits-grid">
+                    <div class="benefit-card">
+                        <div class="benefit-icon">
+                            <svg width="32" height="32" viewBox="0 0 32 32" fill="none" aria-hidden="true">
+                                <rect x="4" y="8" width="24" height="16" rx="3" stroke="#0066ff" stroke-width="1.8"/>
+                                <path d="M10 16h12M10 20h8" stroke="#0066ff" stroke-width="1.5" stroke-linecap="round"/>
+                                <circle cx="24" cy="8" r="6" fill="#1a1a1a" stroke="#0066ff" stroke-width="1.5"/>
+                                <path d="M22 8L23.5 9.5L26 7" stroke="#0066ff" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </div>
+                        <h3>No Coding Required</h3>
+                        <p>Speak in plain English. Ask questions the way you'd ask a colleague. The AI handles the technical translation.</p>
+                    </div>
+                    <div class="benefit-card">
+                        <div class="benefit-icon">
+                            <svg width="32" height="32" viewBox="0 0 32 32" fill="none" aria-hidden="true">
+                                <path d="M6 24 L16 6 L26 24" stroke="#0066ff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M10 18 H22" stroke="#0066ff" stroke-width="1.5" stroke-linecap="round"/>
+                                <circle cx="16" cy="22" r="1.5" fill="#0066ff"/>
+                            </svg>
+                        </div>
+                        <h3>Plain English Commands</h3>
+                        <p>"Read this card" or "What frequency is this device on?" — natural language that just works.</p>
+                    </div>
+                    <div class="benefit-card">
+                        <div class="benefit-icon">
+                            <svg width="32" height="32" viewBox="0 0 32 32" fill="none" aria-hidden="true">
+                                <rect x="4" y="4" width="24" height="24" rx="4" stroke="#0066ff" stroke-width="1.8"/>
+                                <path d="M11 16L14 19L21 12" stroke="#0066ff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </div>
+                        <h3>Pre-Assembled & Tested</h3>
+                        <p>We build, flash, and test every kit before it ships. Plug it in and go — no firmware flashing required.</p>
+                    </div>
+                    <div class="benefit-card">
+                        <div class="benefit-icon">
+                            <svg width="32" height="32" viewBox="0 0 32 32" fill="none" aria-hidden="true">
+                                <path d="M16 4L28 10V18C28 23.5 23 28 16 30C9 28 4 23.5 4 18V10L16 4Z" stroke="#0066ff" stroke-width="1.8" stroke-linejoin="round"/>
+                                <path d="M12 16L15 19L20 13" stroke="#0066ff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </div>
+                        <h3>Professional Tool</h3>
+                        <p>Built for real-world use cases: farms, facilities, and fieldwork. Not a toy — a trusted instrument.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==================== WHAT'S INCLUDED ==================== -->
+        <section class="whats-included" id="whats-included">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Everything Arrives Ready to Use</h2>
+                    <p class="section-subtitle">One box. Everything included. No extra purchases needed.</p>
+                </div>
+                <div class="included-grid">
+                    <div class="included-item">
+                        <div class="included-icon">
+                            <svg width="36" height="36" viewBox="0 0 36 36" fill="none" aria-hidden="true">
+                                <rect x="10" y="6" width="16" height="24" rx="3" fill="#2a2a2a" stroke="#0066ff" stroke-width="1.5"/>
+                                <rect x="13" y="10" width="10" height="7" rx="1" fill="#111"/>
+                                <rect x="14" y="20" width="8" height="2" rx="0.5" fill="#0066ff" opacity="0.6"/>
+                                <rect x="14" y="24" width="8" height="2" rx="0.5" fill="#0066ff" opacity="0.3"/>
+                            </svg>
+                        </div>
+                        <div class="included-text">
+                            <h4>Flipper Zero</h4>
+                            <p>Official firmware. Pre-configured and ready for AI commands.</p>
+                        </div>
+                    </div>
+                    <div class="included-item">
+                        <div class="included-icon">
+                            <svg width="36" height="36" viewBox="0 0 36 36" fill="none" aria-hidden="true">
+                                <rect x="8" y="4" width="20" height="28" rx="3" fill="#2a2a2a" stroke="#0066ff" stroke-width="1.5"/>
+                                <rect x="11" y="8" width="14" height="18" rx="1" fill="#111"/>
+                                <circle cx="18" cy="28" r="1.5" fill="#0066ff"/>
+                                <rect x="13" y="10" width="10" height="14" rx="1" fill="#0066ff" opacity="0.15"/>
+                            </svg>
+                        </div>
+                        <div class="included-text">
+                            <h4>Motorola Moto G Play 2026</h4>
+                            <p>Vesper app pre-installed and configured. Just pair and go.</p>
+                        </div>
+                    </div>
+                    <div class="included-item">
+                        <div class="included-icon">
+                            <svg width="36" height="36" viewBox="0 0 36 36" fill="none" aria-hidden="true">
+                                <rect x="6" y="12" width="24" height="12" rx="2" fill="#2a2a2a" stroke="#0066ff" stroke-width="1.5"/>
+                                <path d="M10 12V10a2 2 0 012-2h12a2 2 0 012 2v2" stroke="#0066ff" stroke-width="1.3"/>
+                                <text x="18" y="21" text-anchor="middle" fill="#0066ff" font-size="5" font-family="Inter,sans-serif" font-weight="600">SD</text>
+                            </svg>
+                        </div>
+                        <div class="included-text">
+                            <h4>32GB SanDisk Ultra SD Card</h4>
+                            <p>Pre-loaded with configuration files and space for your captures.</p>
+                        </div>
+                    </div>
+                    <div class="included-item">
+                        <div class="included-icon">
+                            <svg width="36" height="36" viewBox="0 0 36 36" fill="none" aria-hidden="true">
+                                <path d="M12 18H24M18 12V24" stroke="#0066ff" stroke-width="1.8" stroke-linecap="round"/>
+                                <rect x="8" y="14" width="20" height="8" rx="2" fill="#2a2a2a" stroke="#0066ff" stroke-width="1.3"/>
+                                <rect x="6" y="16" width="4" height="4" rx="1" fill="#0066ff" opacity="0.5"/>
+                                <rect x="26" y="16" width="4" height="4" rx="1" fill="#0066ff" opacity="0.5"/>
+                            </svg>
+                        </div>
+                        <div class="included-text">
+                            <h4>USB-C Charging Cables</h4>
+                            <p>Quality braided cables included for Flipper and phone.</p>
+                        </div>
+                    </div>
+                    <div class="included-item included-item--bonus">
+                        <div class="included-icon included-icon--bonus">
+                            <svg width="36" height="36" viewBox="0 0 36 36" fill="none" aria-hidden="true">
+                                <circle cx="18" cy="18" r="12" fill="#0066ff" opacity="0.15" stroke="#0066ff" stroke-width="1.5"/>
+                                <text x="18" y="22" text-anchor="middle" fill="#0066ff" font-size="12" font-family="Inter,sans-serif" font-weight="700">$10</text>
+                            </svg>
+                        </div>
+                        <div class="included-text">
+                            <h4>$10 OpenRouter API Credit</h4>
+                            <p>Kickstart your AI queries. No subscription required.</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- STRIPE_INTEGRATION_POINT: Secondary purchase CTA -->
+                <div class="included-cta">
+                    <a href="#checkout" class="btn btn-primary btn-lg">Get Your Kit — $499</a>
+                    <p class="cta-note">Free shipping within the US. International shipping available at checkout.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==================== WHO THIS IS FOR ==================== -->
+        <section class="who-for" id="who-its-for">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Built for Real Work, Not Hobbyists</h2>
+                    <p class="section-subtitle">If you're reading this, you probably already know why you need one.</p>
+                </div>
+                <div class="audience-grid">
+                    <div class="audience-card">
+                        <div class="audience-icon">
+                            <svg width="48" height="48" viewBox="0 0 48 48" fill="none" aria-hidden="true">
+                                <path d="M24 6C15.2 6 8 13.2 8 22c0 12 16 20 16 20s16-8 16-20c0-8.8-7.2-16-16-16z" stroke="#0066ff" stroke-width="1.8"/>
+                                <circle cx="24" cy="22" r="6" stroke="#0066ff" stroke-width="1.5"/>
+                                <path d="M24 16v-4M24 30v4M16 22h-4M32 22h4" stroke="#0066ff" stroke-width="1.3" stroke-linecap="round"/>
+                            </svg>
+                        </div>
+                        <h3>Farmers</h3>
+                        <p>Test irrigation sensors, verify equipment RFID tags, check soil monitor frequencies. No RF expertise required.</p>
+                        <ul class="audience-use-cases">
+                            <li>"Check if this sensor is transmitting"</li>
+                            <li>"What frequency is this equipment tag?"</li>
+                            <li>"Read the RFID on this feed inventory"</li>
+                        </ul>
+                    </div>
+                    <div class="audience-card">
+                        <div class="audience-icon">
+                            <svg width="48" height="48" viewBox="0 0 48 48" fill="none" aria-hidden="true">
+                                <rect x="6" y="16" width="36" height="24" rx="3" stroke="#0066ff" stroke-width="1.8"/>
+                                <path d="M6 22h36" stroke="#0066ff" stroke-width="1.3"/>
+                                <rect x="12" y="28" width="6" height="8" rx="1" fill="#0066ff" opacity="0.4"/>
+                                <rect x="21" y="28" width="6" height="8" rx="1" fill="#0066ff" opacity="0.4"/>
+                                <rect x="30" y="28" width="6" height="8" rx="1" fill="#0066ff" opacity="0.4"/>
+                            </svg>
+                        </div>
+                        <h3>Factory Managers</h3>
+                        <p>Audit access control systems, verify badge readers, test physical security infrastructure — on your schedule.</p>
+                        <ul class="audience-use-cases">
+                            <li>"Audit this door's card reader"</li>
+                            <li>"Is this badge reader using 125kHz or 13.56MHz?"</li>
+                            <li>"Test the parking gate frequency"</li>
+                        </ul>
+                    </div>
+                    <div class="audience-card">
+                        <div class="audience-icon">
+                            <svg width="48" height="48" viewBox="0 0 48 48" fill="none" aria-hidden="true">
+                                <path d="M24 6L6 12v12c0 11 8 18 18 22 10-4 18-11 18-22V12L24 6z" stroke="#0066ff" stroke-width="1.8" stroke-linejoin="round"/>
+                                <path d="M16 24l6 6 10-12" stroke="#0066ff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </div>
+                        <h3>Security Professionals</h3>
+                        <p>Read RFID cards, test NFC systems, verify Sub-GHz devices — with a professional tool that's always ready.</p>
+                        <ul class="audience-use-cases">
+                            <li>"Clone this access card format"</li>
+                            <li>"What's this proximity card's data?"</li>
+                            <li>"Scan for active Sub-GHz signals nearby"</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==================== SETUP EXPERIENCE ==================== -->
+        <section class="setup" id="setup">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">From Box to AI in Under 5 Minutes</h2>
+                    <p class="section-subtitle">We did the hard work. You just unbox and go.</p>
+                </div>
+                <div class="setup-steps">
+                    <div class="setup-step">
+                        <div class="step-number">1</div>
+                        <div class="step-content">
+                            <h3>Unbox (60 seconds)</h3>
+                            <p>Open the box. Everything is labeled and ready. No assembly, no tools needed.</p>
+                        </div>
+                    </div>
+                    <div class="setup-connector" aria-hidden="true">
+                        <svg width="40" height="24" viewBox="0 0 40 24" fill="none">
+                            <path d="M0 12h32M28 6l8 6-8 6" stroke="#333" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+                    <div class="setup-step">
+                        <div class="step-number">2</div>
+                        <div class="step-content">
+                            <h3>Pair Bluetooth (3 minutes)</h3>
+                            <p>Open the Vesper app, tap to pair with your Flipper Zero. It happens automatically.</p>
+                        </div>
+                    </div>
+                    <div class="setup-connector" aria-hidden="true">
+                        <svg width="40" height="24" viewBox="0 0 40 24" fill="none">
+                            <path d="M0 12h32M28 6l8 6-8 6" stroke="#333" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+                    <div class="setup-step">
+                        <div class="step-number">3</div>
+                        <div class="step-content">
+                            <h3>Add API Key (30 seconds)</h3>
+                            <p>Enter your OpenRouter API key (or use the $10 credit we included). That's it.</p>
+                        </div>
+                    </div>
+                    <div class="setup-connector" aria-hidden="true">
+                        <svg width="40" height="24" viewBox="0 0 40 24" fill="none">
+                            <path d="M0 12h32M28 6l8 6-8 6" stroke="#333" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+                    <div class="setup-step setup-step--ready">
+                        <div class="step-number step-number--ready">4</div>
+                        <div class="step-content">
+                            <h3>You're Ready</h3>
+                            <p>Ask your first question. "What's this card?" — and get an instant, plain-English answer.</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Video preview placeholder — QR code style -->
+                <div class="setup-video">
+                    <div class="video-preview-card">
+                        <div class="video-thumbnail">
+                            <svg width="64" height="64" viewBox="0 0 64 64" fill="none" aria-hidden="true">
+                                <circle cx="32" cy="32" r="28" fill="#2a2a2a" stroke="#333" stroke-width="1.5"/>
+                                <path d="M26 22L44 32L26 42V22Z" fill="#0066ff" opacity="0.8"/>
+                            </svg>
+                        </div>
+                        <div class="video-info">
+                            <h4>See It In Action</h4>
+                            <p>Watch the unboxing and setup walkthrough — 3 minutes, real hardware.</p>
+                            <div class="video-qr-placeholder">
+                                <!-- Placeholder QR code visual -->
+                                <svg width="80" height="80" viewBox="0 0 80 80" fill="none" aria-label="Video tutorial QR code placeholder">
+                                    <rect width="80" height="80" fill="#fff" rx="4"/>
+                                    <rect x="8" y="8" width="24" height="24" rx="2" fill="#1a1a1a"/>
+                                    <rect x="48" y="8" width="24" height="24" rx="2" fill="#1a1a1a"/>
+                                    <rect x="8" y="48" width="24" height="24" rx="2" fill="#1a1a1a"/>
+                                    <rect x="14" y="14" width="12" height="12" rx="1" fill="#fff"/>
+                                    <rect x="54" y="14" width="12" height="12" rx="1" fill="#fff"/>
+                                    <rect x="14" y="54" width="12" height="12" rx="1" fill="#fff"/>
+                                    <rect x="18" y="18" width="4" height="4" fill="#1a1a1a"/>
+                                    <rect x="58" y="18" width="4" height="4" fill="#1a1a1a"/>
+                                    <rect x="18" y="58" width="4" height="4" fill="#1a1a1a"/>
+                                    <!-- QR data modules -->
+                                    <rect x="40" y="8" width="4" height="4" fill="#1a1a1a"/>
+                                    <rect x="40" y="16" width="4" height="4" fill="#1a1a1a"/>
+                                    <rect x="48" y="40" width="4" height="4" fill="#1a1a1a"/>
+                                    <rect x="56" y="48" width="4" height="4" fill="#1a1a1a"/>
+                                    <rect x="64" y="56" width="4" height="4" fill="#1a1a1a"/>
+                                    <rect x="36" y="36" width="4" height="4" fill="#1a1a1a"/>
+                                    <rect x="44" y="44" width="4" height="4" fill="#1a1a1a"/>
+                                    <rect x="52" y="52" width="4" height="4" fill="#1a1a1a"/>
+                                </svg>
+                                <span>vespere.ai/setup-video</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==================== SOCIAL PROOF ==================== -->
+        <section class="social-proof" id="social-proof">
+            <div class="container">
+                <div class="proof-stats">
+                    <div class="proof-stat">
+                        <span class="proof-number">50+</span>
+                        <span class="proof-label">Farms using Vesper kits</span>
+                    </div>
+                    <div class="proof-stat">
+                        <span class="proof-number">4.9<span class="proof-star">★</span></span>
+                        <span class="proof-label">Average rating from first customers</span>
+                    </div>
+                </div>
+                <div class="testimonials">
+                    <div class="testimonial-card">
+                        <div class="testimonial-stars" aria-label="5 stars">
+                            <svg width="16" height="16" viewBox="0 0 16 16" fill="#0066ff" aria-hidden="true"><path d="M8 1l1.8 3.6 4 .6-2.9 2.8.7 4L8 10.4 4.4 12l.7-4L2.2 5.2l4-.6L8 1z"/></svg>
+                            <svg width="16" height="16" viewBox="0 0 16 16" fill="#0066ff" aria-hidden="true"><path d="M8 1l1.8 3.6 4 .6-2.9 2.8.7 4L8 10.4 4.4 12l.7-4L2.2 5.2l4-.6L8 1z"/></svg>
+                            <svg width="16" height="16" viewBox="0 0 16 16" fill="#0066ff" aria-hidden="true"><path d="M8 1l1.8 3.6 4 .6-2.9 2.8.7 4L8 10.4 4.4 12l.7-4L2.2 5.2l4-.6L8 1z"/></svg>
+                            <svg width="16" height="16" viewBox="0 0 16 16" fill="#0066ff" aria-hidden="true"><path d="M8 1l1.8 3.6 4 .6-2.9 2.8.7 4L8 10.4 4.4 12l.7-4L2.2 5.2l4-.6L8 1z"/></svg>
+                            <svg width="16" height="16" viewBox="0 0 16 16" fill="#0066ff" aria-hidden="true"><path d="M8 1l1.8 3.6 4 .6-2.9 2.8.7 4L8 10.4 4.4 12l.7-4L2.2 5.2l4-.6L8 1z"/></svg>
+                        </div>
+                        <blockquote>
+                            <p>"We needed to test 40 irrigation sensors across the property. The Vesper kit made it a one-person job. I asked it to read each sensor and got instant results — no RF knowledge required."</p>
+                        </blockquote>
+                        <cite>— <span class="testimonial-name">Placeholder: Farm Owner, Texas</span></cite>
+                    </div>
+                    <div class="testimonial-card">
+                        <div class="testimonial-stars" aria-label="5 stars">
+                            <svg width="16" height="16" viewBox="0 0 16 16" fill="#0066ff" aria-hidden="true"><path d="M8 1l1.8 3.6 4 .6-2.9 2.8.7 4L8 10.4 4.4 12l.7-4L2.2 5.2l4-.6L8 1z"/></svg>
+                            <svg width="16" height="16" viewBox="0 0 16 16" fill="#0066ff" aria-hidden="true"><path d="M8 1l1.8 3.6 4 .6-2.9 2.8.7 4L8 10.4 4.4 12l.7-4L2.2 5.2l4-.6L8 1z"/></svg>
+                            <svg width="16" height="16" viewBox="0 0 16 16" fill="#0066ff" aria-hidden="true"><path d="M8 1l1.8 3.6 4 .6-2.9 2.8.7 4L8 10.4 4.4 12l.7-4L2.2 5.2l4-.6L8 1z"/></svg>
+                            <svg width="16" height="16" viewBox="0 0 16 16" fill="#0066ff" aria-hidden="true"><path d="M8 1l1.8 3.6 4 .6-2.9 2.8.7 4L8 10.4 4.4 12l.7-4L2.2 5.2l4-.6L8 1z"/></svg>
+                            <svg width="16" height="16" viewBox="0 0 16 16" fill="#0066ff" aria-hidden="true"><path d="M8 1l1.8 3.6 4 .6-2.9 2.8.7 4L8 10.4 4.4 12l.7-4L2.2 5.2l4-.6L8 1z"/></svg>
+                        </div>
+                        <blockquote>
+                            <p>"Finally a tool my team can use without a two-day training course. Pre-assembled, pre-tested, ready to go. We use it weekly for access control audits."</p>
+                        </blockquote>
+                        <cite>— <span class="testimonial-name">Placeholder: Facilities Manager, Midwest</span></cite>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==================== FAQ SECTION ==================== -->
+        <section class="faq" id="faq">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Questions? We've Got Answers.</h2>
+                </div>
+                <div class="faq-list" role="list">
+                    <div class="faq-item" role="listitem">
+                        <button class="faq-question" aria-expanded="false" aria-controls="faq-1">
+                            <span>Do I need to know how to code?</span>
+                            <svg class="faq-chevron" width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+                                <path d="M5 8l5 5 5-5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </button>
+                        <div class="faq-answer" id="faq-1" hidden>
+                            <p>Not at all. That's the whole point. You speak plain English, and the AI translates your questions into Flipper Zero commands. If you can use a smartphone, you can use this.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item" role="listitem">
+                        <button class="faq-question" aria-expanded="false" aria-controls="faq-2">
+                            <span>How long does shipping take?</span>
+                            <svg class="faq-chevron" width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+                                <path d="M5 8l5 5 5-5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </button>
+                        <div class="faq-answer" id="faq-2" hidden>
+                            <p>Our kits are built and tested to order. Current build time is 7–10 business days, plus shipping. US domestic shipping typically adds 2–5 business days. International shipping available at checkout.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item" role="listitem">
+                        <button class="faq-question" aria-expanded="false" aria-controls="faq-3">
+                            <span>Can I use my own phone instead of the included Moto G Play?</span>
+                            <svg class="faq-chevron" width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+                                <path d="M5 8l5 5 5-5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </button>
+                        <div class="faq-answer" id="faq-3" hidden>
+                            <p>Yes — the Vesper app runs on any Android phone (Android 8.0+). The included Moto G Play is pre-configured and ready to go, but you can install the Vesper app on your own Android device if you prefer. iOS support is on the roadmap.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item" role="listitem">
+                        <button class="faq-question" aria-expanded="false" aria-controls="faq-4">
+                            <span>What if I have issues with the kit?</span>
+                            <svg class="faq-chevron" width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+                                <path d="M5 8l5 5 5-5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </button>
+                        <div class="faq-answer" id="faq-4" hidden>
+                            <p>We offer a 30-day return policy — no questions asked. If your kit has any hardware issues, contact us at <a href="mailto:help@vespere.ai">help@vespere.ai</a> and we'll sort it out. We also provide email support for setup questions.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item" role="listitem">
+                        <button class="faq-question" aria-expanded="false" aria-controls="faq-5">
+                            <span>What does the $10 API credit get me?</span>
+                            <svg class="faq-chevron" width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+                                <path d="M5 8l5 5 5-5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </button>
+                        <div class="faq-answer" id="faq-5" hidden>
+                            <p>The credit is for OpenRouter API calls, which power the AI translation layer. Depending on usage, $10 typically covers hundreds of queries. After that, you add your own API credit at OpenRouter — no subscription required, pay only for what you use.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item" role="listitem">
+                        <button class="faq-question" aria-expanded="false" aria-controls="faq-6">
+                            <span>Is this legal to use?</span>
+                            <svg class="faq-chevron" width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+                                <path d="M5 8l5 5 5-5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </button>
+                        <div class="faq-answer" id="faq-6" hidden>
+                            <p>The Vesper kit is a professional testing tool for authorized security auditing, equipment verification, and legitimate research. It's your responsibility to use it lawfully. Do not use it on systems you don't have permission to test. Responsible use is a core condition of purchase.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==================== CHECKOUT / FINAL CTA ==================== -->
+        <section class="checkout" id="checkout">
+            <div class="container">
+                <div class="checkout-card">
+                    <div class="checkout-content">
+                        <h2>Ready to Get Started?</h2>
+                        <p>Everything you need — pre-assembled, pre-tested, shipped to your door.</p>
+                        <ul class="checkout-includes">
+                            <li>
+                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8l3.5 3.5L13 5" stroke="#0066ff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                                Flipper Zero (official firmware)
+                            </li>
+                            <li>
+                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8l3.5 3.5L13 5" stroke="#0066ff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                                Motorola Moto G Play 2026 (Vesper app installed)
+                            </li>
+                            <li>
+                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8l3.5 3.5L13 5" stroke="#0066ff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                                32GB SD card, USB-C cables, $10 API credit
+                            </li>
+                            <li>
+                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8l3.5 3.5L13 5" stroke="#0066ff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                                Built & tested before shipping
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="checkout-action">
+                        <!-- STRIPE_INTEGRATION_POINT: Final purchase button - Replace href with Stripe Checkout URL -->
+                        <div class="price-tag">$499</div>
+                        <a href="#" class="btn btn-primary btn-lg btn-block" id="stripe-checkout-btn">
+                            Get Your Kit — $499
+                        </a>
+                        <div class="checkout-trust">
+                            <span>
+                                <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M7 1L9 5H13L10 7.5L11 12L7 9.5L3 12L4 7.5L1 5H5L7 1Z" fill="#888"/></svg>
+                                30-day returns
+                            </span>
+                            <span>
+                                <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><rect x="2" y="5" width="10" height="8" rx="1.5" stroke="#888" stroke-width="1.2"/><path d="M4 5V4a3 3 0 016 0v1" stroke="#888" stroke-width="1.2"/></svg>
+                                Secure checkout
+                            </span>
+                            <span>
+                                <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><circle cx="7" cy="7" r="6" stroke="#888" stroke-width="1.2"/><path d="M7 4v3.5l2.5 1.5" stroke="#888" stroke-width="1.2" stroke-linecap="round"/></svg>
+                                US-based support
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- ==================== FOOTER ==================== -->
+    <footer class="site-footer">
+        <div class="container footer-inner">
+            <div class="footer-brand">
+                <img src="assets/vesper-logo.svg" alt="Vesper AI" width="120" height="31">
+                <p>Security testing tools for people who have better things to do than read RF documentation.</p>
+            </div>
+            <div class="footer-links">
+                <div class="footer-col">
+                    <h5>Product</h5>
+                    <a href="#whats-included">What's Included</a>
+                    <a href="#who-its-for">Who It's For</a>
+                    <a href="#faq">FAQ</a>
+                    <a href="#checkout">Get the Kit</a>
+                </div>
+                <div class="footer-col">
+                    <h5>Support</h5>
+                    <a href="mailto:help@vespere.ai">help@vespere.ai</a>
+                    <a href="#faq">Common Questions</a>
+                </div>
+                <div class="footer-col">
+                    <h5>Legal</h5>
+                    <a href="#">Return Policy</a>
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+        <div class="container footer-bottom">
+            <p class="disclaimer">
+                <strong>Responsible Use Required:</strong> The Vesper AI Flipper Kit is intended for authorized security testing, equipment auditing, and legitimate research only. Misuse of this tool may violate local, state, national, or international laws. The user is solely responsible for ensuring their use cases are legal in their jurisdiction. Vesper AI, LLC accepts no liability for misuse.
+            </p>
+            <p class="copyright">&copy; 2026 Vesper AI, LLC. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

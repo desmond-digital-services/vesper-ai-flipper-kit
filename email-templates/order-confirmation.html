@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Confirmation - Vesper AI Flipper Kit</title>
+</head>
+<body style="margin: 0; padding: 0; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: #f5f5f5;">
+    
+    <!-- Email Container -->
+    <table role="presentation" cellspacing="0" cellpadding="0" width="100%" style="background-color: #f5f5f5;">
+        <tr>
+            <td align="center" style="padding: 40px 20px;">
+                
+                <!-- Main Email Card -->
+                <table role="presentation" cellspacing="0" cellpadding="0" width="600" style="background-color: #ffffff; border-radius: 8px; overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
+                    
+                    <!-- Header with Logo -->
+                    <tr>
+                        <td style="background-color: #1a1a1a; padding: 30px; text-align: center;">
+                            <img src="https://vespere.ai/logo.png" alt="Vesper AI" width="180" style="display: block; margin: 0 auto;">
+                        </td>
+                    </tr>
+                    
+                    <!-- Hero Section -->
+                    <tr>
+                        <td style="background: linear-gradient(135deg, #0066ff 0%, #0052cc 100%); padding: 40px 30px; text-align: center;">
+                            <h1 style="color: #ffffff; margin: 0; font-size: 28px; font-weight: 600;">✓ Order Confirmed!</h1>
+                            <p style="color: rgba(255,255,255,0.9); margin: 15px 0 0 0; font-size: 18px;">Your Vesper AI Flipper Kit is on its way to production</p>
+                        </td>
+                    </tr>
+                    
+                    <!-- Order Details Section -->
+                    <tr>
+                        <td style="padding: 40px 30px;">
+                            
+                            <h2 style="color: #1a1a1a; margin: 0 0 25px 0; font-size: 22px; font-weight: 600;">Order Details</h2>
+                            
+                            <!-- Order Number Box -->
+                            <table role="presentation" cellspacing="0" cellpadding="0" width="100%" style="background-color: #f5f5f5; border-radius: 6px; margin-bottom: 25px;">
+                                <tr>
+                                    <td style="padding: 20px;">
+                                        <p style="margin: 0; color: #666666; font-size: 14px; text-transform: uppercase; letter-spacing: 1px;">Order Number</p>
+                                        <p style="margin: 8px 0 0 0; color: #1a1a1a; font-size: 24px; font-weight: 700;">#{{ORDER_NUMBER}}</p>
+                                    </td>
+                                </tr>
+                            </table>
+                            
+                            <!-- Customer Info -->
+                            <table role="presentation" cellspacing="0" cellpadding="0" width="100%">
+                                <tr>
+                                    <td style="padding: 15px 0; border-bottom: 1px solid #eeeeee;">
+                                        <p style="margin: 0; color: #666666; font-size: 14px;">Customer Name</p>
+                                        <p style="margin: 5px 0 0 0; color: #1a1a1a; font-size: 16px; font-weight: 500;">{{CUSTOMER_NAME}}</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="padding: 15px 0; border-bottom: 1px solid #eeeeee;">
+                                        <p style="margin: 0; color: #666666; font-size: 14px;">Email</p>
+                                        <p style="margin: 5px 0 0 0; color: #1a1a1a; font-size: 16px;">{{CUSTOMER_EMAIL}}</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="padding: 15px 0; border-bottom: 1px solid #eeeeee;">
+                                        <p style="margin: 0; color: #666666; font-size: 14px;">Order Date</p>
+                                        <p style="margin: 5px 0 0 0; color: #1a1a1a; font-size: 16px;">{{ORDER_DATE}}</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="padding: 15px 0;">
+                                        <p style="margin: 0; color: #666666; font-size: 14px;">Total Amount</p>
+                                        <p style="margin: 5px 0 0 0; color: #0066ff; font-size: 20px; font-weight: 600;">${{ORDER_AMOUNT}}</p>
+                                    </td>
+                                </tr>
+                            </table>
+                            
+                        </td>
+                    </tr>
+                    
+                    <!-- Timeline Section -->
+                    <tr>
+                        <td style="background-color: #f9fafb; padding: 30px;">
+                            <h3 style="color: #1a1a1a; margin: 0 0 20px 0; font-size: 18px; font-weight: 600;">Build & Delivery Timeline</h3>
+                            
+                            <table role="presentation" cellspacing="0" cellpadding="0" width="100%">
+                                <tr>
+                                    <td width="40" style="vertical-align: top;">
+                                        <div style="width: 24px; height: 24px; background-color: #0066ff; border-radius: 50%; display: flex; align-items: center; justify-content: center;">
+                                            <span style="color: #ffffff; font-size: 12px; font-weight: 600;">1</span>
+                                        </div>
+                                    </td>
+                                    <td style="padding-bottom: 20px;">
+                                        <p style="margin: 0; color: #1a1a1a; font-size: 15px; font-weight: 500;">Order Confirmed</p>
+                                        <p style="margin: 4px 0 0 0; color: #666666; font-size: 14px;">{{ORDER_DATE}} - Your payment has been processed</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td width="40" style="vertical-align: top;">
+                                        <div style="width: 24px; height: 24px; background-color: #e0e0e0; border-radius: 50%; display: flex; align-items: center; justify-content: center;">
+                                            <span style="color: #ffffff; font-size: 12px; font-weight: 600;">2</span>
+                                        </div>
+                                    </td>
+                                    <td style="padding-bottom: 20px;">
+                                        <p style="margin: 0; color: #666666; font-size: 15px; font-weight: 500;">Building in Progress</p>
+                                        <p style="margin: 4px 0 0 0; color: #999999; font-size: 14px;">Day 5 - Hardware assembly underway</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td width="40" style="vertical-align: top;">
+                                        <div style="width: 24px; height: 24px; background-color: #e0e0e0; border-radius: 50%; display: flex; align-items: center; justify-content: center;">
+                                            <span style="color: #ffffff; font-size: 12px; font-weight: 600;">3</span>
+                                        </div>
+                                    </td>
+                                    <td style="padding-bottom: 20px;">
+                                        <p style="margin: 0; color: #666666; font-size: 15px; font-weight: 500;">Quality Check</p>
+                                        <p style="margin: 4px 0 0 0; color: #999999; font-size: 14px;">Day 7-8 - Testing and inspection</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td width="40" style="vertical-align: top;">
+                                        <div style="width: 24px; height: 24px; background-color: #e0e0e0; border-radius: 50%; display: flex; align-items: center; justify-content: center;">
+                                            <span style="color: #ffffff; font-size: 12px; font-weight: 600;">4</span>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <p style="margin: 0; color: #666666; font-size: 15px; font-weight: 500;">Shipped to You</p>
+                                        <p style="margin: 4px 0 0 0; color: #999999; font-size: 14px;">Day 8-10 - Via USPS Priority Mail</p>
+                                    </td>
+                                </tr>
+                            </table>
+                            
+                            <!-- Estimated Delivery -->
+                            <div style="background-color: #0066ff; border-radius: 6px; padding: 20px; margin-top: 25px; text-align: center;">
+                                <p style="margin: 0; color: rgba(255,255,255,0.9); font-size: 14px;">Estimated Delivery</p>
+                                <p style="margin: 8px 0 0 0; color: #ffffff; font-size: 22px; font-weight: 600;">{{ESTIMATED_DELIVERY}}</p>
+                            </div>
+                            
+                        </td>
+                    </tr>
+                    
+                    <!-- What's Next Section -->
+                    <tr>
+                        <td style="padding: 40px 30px;">
+                            <h3 style="color: #1a1a1a; margin: 0 0 20px 0; font-size: 18px; font-weight: 600;">What Happens Next?</h3>
+                            <p style="margin: 0 0 15px 0; color: #555555; font-size: 15px; line-height: 1.6;">Our team is already preparing the components for your custom Vesper AI Flipper Kit. You'll receive updates at each stage of the build process.</p>
+                            <p style="margin: 0; color: #555555; font-size: 15px; line-height: 1.6;">You'll hear from us when your kit ships with tracking information included.</p>
+                        </td>
+                    </tr>
+                    
+                    <!-- CTA Button -->
+                    <tr>
+                        <td style="padding: 0 30px 30px 30px; text-align: center;">
+                            <a href="https://vespere.ai/support" style="display: inline-block; background-color: #0066ff; color: #ffffff; text-decoration: none; padding: 15px 40px; border-radius: 6px; font-size: 16px; font-weight: 600;">View Order Status</a>
+                        </td>
+                    </tr>
+                    
+                    <!-- Footer -->
+                    <tr>
+                        <td style="background-color: #1a1a1a; padding: 30px; text-align: center;">
+                            <p style="margin: 0 0 15px 0; color: rgba(255,255,255,0.7); font-size: 14px;">Need help? We're here for you.</p>
+                            <p style="margin: 0; color: #ffffff; font-size: 14px;">📧 <a href="mailto:help@vespere.ai" style="color: #0066ff; text-decoration: none;">help@vespere.ai</a> &nbsp;&nbsp;|&nbsp;&nbsp; 🌐 <a href="https://vespere.ai" style="color: #0066ff; text-decoration: none;">vespere.ai</a></p>
+                            <p style="margin: 20px 0 0 0; color: rgba(255,255,255,0.4); font-size: 12px;">© 2026 Vesper AI. All rights reserved.</p>
+                        </td>
+                    </tr>
+                    
+                </table>
+                <!-- End Main Email Card -->
+                
+            </td>
+        </tr>
+    </table>
+    
+</body>
+</html>

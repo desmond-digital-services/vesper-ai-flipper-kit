@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Supplier Inquiry - Vesper AI</title>
+    <style>
+        :root {
+            --primary: #6366f1;
+            --primary-dark: #4f46e5;
+            --bg: #f8fafc;
+            --surface: #ffffff;
+            --text: #1e293b;
+            --text-muted: #64748b;
+            --border: #e2e8f0;
+            --success: #10b981;
+            --warning: #f59e0b;
+            --danger: #ef4444;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.6;
+            padding: 2rem;
+        }
+
+        .container {
+            max-width: 640px;
+            margin: 0 auto;
+            background: var(--surface);
+            border-radius: 12px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+            overflow: hidden;
+        }
+
+        .header {
+            background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+            color: white;
+            padding: 2rem;
+            text-align: center;
+        }
+
+        .header h1 {
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-bottom: 0.25rem;
+        }
+
+        .header .subtitle {
+            opacity: 0.9;
+            font-size: 0.875rem;
+        }
+
+        .badge {
+            display: inline-block;
+            padding: 0.25rem 0.75rem;
+            border-radius: 9999px;
+            font-size: 0.75rem;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-top: 0.75rem;
+        }
+
+        .badge-order { background: rgba(16, 185, 129, 0.15); color: var(--success); }
+        .badge-shipping { background: rgba(99, 102, 241, 0.15); color: var(--primary); }
+        .badge-stock { background: rgba(245, 158, 11, 0.15); color: var(--warning); }
+        .badge-return { background: rgba(239, 68, 68, 0.15); color: var(--danger); }
+
+        .content {
+            padding: 2rem;
+        }
+
+        .field {
+            margin-bottom: 1.5rem;
+        }
+
+        .field-label {
+            font-size: 0.75rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            color: var(--text-muted);
+            margin-bottom: 0.5rem;
+        }
+
+        .field-value {
+            font-size: 1rem;
+            color: var(--text);
+        }
+
+        .items-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1.5rem 0;
+        }
+
+        .items-table th,
+        .items-table td {
+            padding: 0.75rem;
+            text-align: left;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .items-table th {
+            font-size: 0.75rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            color: var(--text-muted);
+            background: var(--bg);
+        }
+
+        .items-table td {
+            font-size: 0.875rem;
+        }
+
+        .items-table .qty,
+        .items-table .price {
+            text-align: right;
+            font-variant-numeric: tabular-nums;
+        }
+
+        .total-row {
+            font-weight: 600;
+        }
+
+        .total-row td {
+            border-bottom: none;
+            padding-top: 1rem;
+        }
+
+        .message-box {
+            background: var(--bg);
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+        }
+
+        .message-box p {
+            margin-bottom: 1rem;
+        }
+
+        .message-box p:last-child {
+            margin-bottom: 0;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background: var(--primary);
+            color: white;
+            padding: 0.75rem 1.5rem;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 500;
+            margin-top: 1rem;
+        }
+
+        .cta-button:hover {
+            background: var(--primary-dark);
+        }
+
+        .footer {
+            padding: 1.5rem 2rem;
+            background: var(--bg);
+            border-top: 1px solid var(--border);
+            font-size: 0.875rem;
+            color: var(--text-muted);
+            text-align: center;
+        }
+
+        .footer a {
+            color: var(--primary);
+            text-decoration: none;
+        }
+
+        .checklist {
+            list-style: none;
+            padding: 0;
+        }
+
+        .checklist li {
+            padding: 0.5rem 0;
+            padding-left: 1.5rem;
+            position: relative;
+        }
+
+        .checklist li::before {
+            content: "☐";
+            position: absolute;
+            left: 0;
+        }
+
+        .timeline {
+            border-left: 2px solid var(--border);
+            margin-left: 0.5rem;
+            padding-left: 1.5rem;
+        }
+
+        .timeline-item {
+            position: relative;
+            padding-bottom: 1.5rem;
+        }
+
+        .timeline-item::before {
+            content: "";
+            position: absolute;
+            left: -1.6rem;
+            top: 0.25rem;
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background: var(--primary);
+            border: 2px solid var(--surface);
+        }
+
+        .timeline-item.completed::before {
+            background: var(--success);
+        }
+
+        .timeline-date {
+            font-size: 0.75rem;
+            color: var(--text-muted);
+        }
+
+        .divider {
+            height: 1px;
+            background: var(--border);
+            margin: 1.5rem 0;
+        }
+
+        @media print {
+            body { background: white; padding: 0; }
+            .container { box-shadow: none; }
+        }
+    </style>
+</head>
+<body>
+    <!-- TEMPLATE 1: ORDER CONFIRMATION -->
+    <div class="container" id="template-order-confirmation">
+        <div class="header">
+            <h1>Order Confirmation</h1>
+            <p class="subtitle">Thank you for your order!</p>
+            <span class="badge badge-order">Order Confirmed</span>
+        </div>
+        <div class="content">
+            <div class="field">
+                <div class="field-label">Order Number</div>
+                <div class="field-value" style="font-size: 1.25rem; font-weight: 600;">#{{order_number}}</div>
+            </div>
+
+            <div class="field">
+                <div class="field-label">Order Date</div>
+                <div class="field-value">{{order_date}}</div>
+            </div>
+
+            <div class="field">
+                <div class="field-label">Expected {{#if is_pickup}}Pickup{{else}}Delivery{{/if}}</div>
+                <div class="field-value">{{expected_date}}</div>
+            </div>
+
+            <div class="divider"></div>
+
+            <table class="items-table">
+                <thead>
+                    <tr>
+                        <th>Item</th>
+                        <th class="qty">Qty</th>
+                        <th class="price">Price</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {{#each items}}
+                    <tr>
+                        <td>{{name}}<br><small style="color: var(--text-muted);">{{sku}}</small></td>
+                        <td class="qty">{{quantity}}</td>
+                        <td class="price">{{price}}</td>
+                    </tr>
+                    {{/each}}
+                    <tr class="total-row">
+                        <td colspan="2">Total</td>
+                        <td class="price">{{total_amount}}</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            {{#if is_pickup}}
+            <div class="message-box">
+                <div class="field-label">Pickup Location</div>
+                <p><strong>{{store_name}}</strong><br>
+                {{store_address}}<br>
+                {{store_phone}}</p>
+                <p style="margin-top: 0.75rem; font-size: 0.875rem;">
+                    Please bring a valid photo ID when picking up your order.
+                </p>
+            </div>
+            {{/if}}
+
+            <div class="message-box">
+                <p>Your order has been received and is being processed. 
+                {{#if is_pickup}}We'll notify you when your items are ready for pickup.{{else}}You'll receive tracking information once your order ships.{{/if}}</p>
+            </div>
+        </div>
+        <div class="footer">
+            <p>Vesper AI Procurement<br>
+            Questions? Reply to this email or contact us at <a href="mailto:procurement@vesper.ai">procurement@vesper.ai</a></p>
+        </div>
+    </div>
+
+    <!-- TEMPLATE 2: SHIPPING INQUIRY -->
+    <div class="container" id="template-shipping-inquiry" style="display: none;">
+        <div class="header">
+            <h1>Shipping Inquiry</h1>
+            <p class="subtitle">Where's my order?</p>
+            <span class="badge badge-shipping">Tracking Request</span>
+        </div>
+        <div class="content">
+            <div class="message-box">
+                <p>Hello,</p>
+                <p>We placed an order (#<strong>{{order_number}}</strong>) on {{order_date}} and wanted to check on the shipping status.</p>
+                <p><strong>Items ordered:</strong></p>
+                <ul style="margin: 0.75rem 0; padding-left: 1.5rem;">
+                    {{#each items}}
+                    <li>{{name}} x{{quantity}}</li>
+                    {{/each}}
+                </ul>
+                <p>Could you please provide:</p>
+                <ol style="margin: 0.75rem 0; padding-left: 1.5rem;">
+                    <li style="margin-bottom: 0.5rem;"><strong>Tracking number</strong> (once shipped)</li>
+                    <li style="margin-bottom: 0.5rem;"><strong>Carrier information</strong> (UPS, FedEx, USPS, etc.)</li>
+                    <li style="margin-bottom: 0.5rem;"><strong>Estimated delivery date</strong></li>
+                    <li><strong>Current location</strong> of the package</li>
+                </ol>
+            </div>
+
+            <p>If there are any issues with the order or shipping, please let us know so we can resolve them promptly.</p>
+
+            <p style="margin-top: 1rem;">Thank you,<br><strong>{{sender_name}}</strong><br>
+            Vesper AI Procurement</p>
+        </div>
+        <div class="footer">
+            <p>Order Reference: <strong>{{order_number}}</strong><br>
+            Reply to: <a href="mailto:procurement@vesper.ai">procurement@vesper.ai</a></p>
+        </div>
+    </div>
+
+    <!-- TEMPLATE 3: STOCK AVAILABILITY REQUEST -->
+    <div class="container" id="template-stock-request" style="display: none;">
+        <div class="header">
+            <h1>Stock Availability Request</h1>
+            <p class="subtitle">Checking product availability</p>
+            <span class="badge badge-stock">Stock Inquiry</span>
+        </div>
+        <div class="content">
+            <div class="message-box">
+                <p>Hello,</p>
+                <p>We're interested in purchasing the following items from {{supplier_name}} and would like to confirm availability:</p>
+            </div>
+
+            <table class="items-table">
+                <thead>
+                    <tr>
+                        <th>Product</th>
+                        <th class="qty">Qty</th>
+                        <th>Availability</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {{#each items}}
+                    <tr>
+                        <td>{{name}}<br><small style="color: var(--text-muted);">{{sku}}</small></td>
+                        <td class="qty">{{quantity}}</td>
+                        <td><em>Please confirm</em></td>
+                    </tr>
+                    {{/each}}
+                </tbody>
+            </table>
+
+            <div class="field" style="margin-top: 1.5rem;">
+                <div class="field-label">Preferred {{#if is_pickup}}Pickup{{else}}Delivery{{/if}} Timeline</div>
+                <div class="field-value">{{preferred_timeline}}</div>
+            </div>
+
+            <div class="message-box">
+                <p><strong>If available:</strong> Please provide pricing and confirm the order can be fulfilled within our timeline.</p>
+                <p><strong>If on backorder:</strong> Please provide estimated availability date.</p>
+                <p><strong>If out of stock:</strong> Please suggest alternatives or notify us of restock dates.</p>
+            </div>
+
+            <p>We're also interested in setting up a <strong>standing order</strong> for recurring procurement of these items. Would your team be open to establishing a supplier relationship?</p>
+
+            <p style="margin-top: 1rem;">Thank you,<br><strong>{{sender_name}}</strong><br>
+            Vesper AI Procurement</p>
+        </div>
+        <div class="footer">
+            <p>Contact: <a href="mailto:procurement@vesper.ai">procurement@vesper.ai</a></p>
+        </div>
+    </div>
+
+    <!-- TEMPLATE 4: RETURN / EXCHANGE REQUEST -->
+    <div class="container" id="template-return-request" style="display: none;">
+        <div class="header" style="background: linear-gradient(135deg, #ef4444, #dc2626);">
+            <h1>Return / Exchange Request</h1>
+            <p class="subtitle">Requesting a return or exchange</p>
+            <span class="badge badge-return">Return Request</span>
+        </div>
+        <div class="content">
+            <div class="field">
+                <div class="field-label">Original Order Number</div>
+                <div class="field-value" style="font-weight: 600;">#{{order_number}}</div>
+            </div>
+
+            <div class="field">
+                <div class="field-label">Original Order Date</div>
+                <div class="field-value">{{order_date}}</div>
+            </div>
+
+            <div class="field">
+                <div class="field-label">Request Type</div>
+                <div class="field-value">
+                    <span class="badge" style="{{#if is_exchange}}background: rgba(99, 102, 241, 0.15); color: var(--primary);{{else}}background: rgba(239, 68, 68, 0.15); color: var(--danger);{{/if}}">
+                        {{#if is_exchange}}EXCHANGE{{else}}RETURN{{/if}}
+                    </span>
+                </div>
+            </div>
+
+            <div class="divider"></div>
+
+            <table class="items-table">
+                <thead>
+                    <tr>
+                        <th>Item to {{#if is_exchange}}Exchange{{else}}Return{{/if}}</th>
+                        <th class="qty">Qty</th>
+                        <th>Reason</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {{#each items}}
+                    <tr>
+                        <td>{{name}}<br><small style="color: var(--text-muted);">{{sku}}</small></td>
+                        <td class="qty">{{quantity}}</td>
+                        <td><em>{{reason}}</em></td>
+                    </tr>
+                    {{/each}}
+                </tbody>
+            </table>
+
+            {{#if is_exchange}}
+            <div class="field" style="margin-top: 1.5rem;">
+                <div class="field-label">Exchange Preference</div>
+                <div class="field-value">{{exchange_preference}}</div>
+            </div>
+            {{/if}}
+
+            <div class="message-box">
+                <div class="field-label">Issue Description</div>
+                <p>{{issue_description}}</p>
+            </div>
+
+            <p>Please advise on the return process and {{#if is_exchange}}exchange{{else}}refund{{/if}} procedure. We would appreciate:</p>
+            <ul class="checklist">
+                <li>Return shipping label or instructions</li>
+                <li>RMA number (if applicable)</li>
+                <li>{{#if is_exchange}}Exchange item availability and timeline{{else}}Refund method and timeline{{/if}}</li>
+                <li>Packaging requirements</li>
+            </ul>
+
+            <p style="margin-top: 1rem;">Thank you,<br><strong>{{sender_name}}</strong><br>
+            Vesper AI Procurement</p>
+        </div>
+        <div class="footer">
+            <p>Order Reference: <strong>{{order_number}}</strong><br>
+            Contact: <a href="mailto:procurement@vesper.ai">procurement@vesper.ai</a></p>
+        </div>
+    </div>
+
+    <!-- JAVASCRIPT TEMPLATE SELECTOR (for development/demo) -->
+    <script>
+        // Show/hide templates based on query parameter
+        // Usage: add ?template=shipping-inquiry to URL
+        const params = new URLSearchParams(window.location.search);
+        const template = params.get('template');
+        
+        const templates = {
+            'order-confirmation': 'template-order-confirmation',
+            'shipping-inquiry': 'template-shipping-inquiry',
+            'stock-request': 'template-stock-request',
+            'return-request': 'template-return-request'
+        };
+        
+        Object.values(templates).forEach(id => {
+            document.getElementById(id).style.display = 'none';
+        });
+        
+        if (template && templates[template]) {
+            document.getElementById(templates[template]).style.display = 'block';
+        } else {
+            // Show all for development
+            Object.values(templates).forEach(id => {
+                document.getElementById(id).style.marginBottom = '2rem';
+                document.getElementById(id).style.display = 'block';
+            });
+        }
+    </script>
+</body>
+</html>
