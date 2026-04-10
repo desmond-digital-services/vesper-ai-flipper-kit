@@ -1,4 +1,4 @@
-# Vesper AI - API Testing Results
+# RedWand - API Testing Results
 
 **Date:** 2026-04-08
 **Tested By:** D.D. (AI Agent)

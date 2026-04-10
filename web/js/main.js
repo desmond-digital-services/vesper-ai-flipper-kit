@@ -1,10 +1,48 @@
 /**
- * Vesper AI Landing Page — Interactive JavaScript
- * Minimal: FAQ accordion only
+ * RedWand Landing Page — Interactive JavaScript
+ * FAQ accordion, scroll animations, smooth scroll, header effects
  */
 
 (function() {
     'use strict';
+
+    // ==================== SCROLL REVEAL ANIMATION ====================
+    function initScrollReveal() {
+        // Add reveal class to all major sections automatically
+        const sections = document.querySelectorAll('section');
+        sections.forEach(function(section, index) {
+            section.classList.add('reveal');
+            // Stagger the delays for consecutive elements
+            const children = section.querySelectorAll('.benefit-card, .audience-card, .included-item, .testimonial-card, .faq-item');
+            children.forEach(function(child, childIndex) {
+                child.classList.add('reveal');
+                child.classList.add('reveal-delay-' + ((childIndex % 4) + 1));
+            });
+        });
+        
+        const revealElements = document.querySelectorAll('.reveal');
+        
+        if (!revealElements.length) return;
+
+        const observerOptions = {
+            root: null,
+            rootMargin: '0px 0px -80px 0px',
+            threshold: 0.1
+        };
+
+        const revealObserver = new IntersectionObserver(function(entries) {
+            entries.forEach(function(entry) {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('revealed');
+                    revealObserver.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+
+        revealElements.forEach(function(el) {
+            revealObserver.observe(el);
+        });
+    }
 
     // ==================== FAQ ACCORDION ====================
     function initFAQ() {
@@ -19,23 +57,23 @@
             button.addEventListener('click', function() {
                 const isExpanded = button.getAttribute('aria-expanded') === 'true';
 
-                // Close all other items (optional: remove for multi-open behavior)
+                // Close all other items
                 faqItems.forEach(function(otherItem) {
                     const otherButton = otherItem.querySelector('.faq-question');
                     const otherAnswer = otherItem.querySelector('.faq-answer');
                     if (otherButton && otherAnswer && otherItem !== item) {
                         otherButton.setAttribute('aria-expanded', 'false');
-                        otherAnswer.hidden = true;
+                        otherAnswer.classList.remove('open');
                     }
                 });
 
                 // Toggle current item
                 if (isExpanded) {
                     button.setAttribute('aria-expanded', 'false');
-                    answer.hidden = true;
+                    answer.classList.remove('open');
                 } else {
                     button.setAttribute('aria-expanded', 'true');
-                    answer.hidden = false;
+                    answer.classList.add('open');
                 }
             });
         });
@@ -68,46 +106,14 @@
         const header = document.querySelector('.site-header');
         if (!header) return;
 
-        let lastScrollY = 0;
-
         window.addEventListener('scroll', function() {
-            const scrollY = window.scrollY;
-
-            if (scrollY > 100) {
-                header.style.boxShadow = '0 4px 20px rgba(0,0,0,0.3)';
+            if (window.scrollY > 50) {
+                header.classList.add('scrolled');
             } else {
-                header.style.boxShadow = 'none';
+                header.classList.remove('scrolled');
             }
-
-            lastScrollY = scrollY;
         }, { passive: true });
     }
-
-    // ==================== STRIPE CHECKOUT HANDLER ====================
-    // STRIPE_INTEGRATION_POINT: Replace with your actual Stripe product/price ID
-    // Example: const stripe = Stripe('pk_live_YOUR_PUBLISHABLE_KEY');
-    //
-    // function redirectToStripeCheckout() {
-    //     stripe.redirectToCheckout({
-    //         lineItems: [{ price: 'price_YOUR_PRICE_ID', quantity: 1 }],
-    //         mode: 'payment',
-    //         successUrl: window.location.origin + '/success',
-    //         cancelUrl: window.location.origin + '/cancel',
-    //     }).catch(function(err) {
-    //         console.error('Stripe checkout error:', err);
-    //     });
-    // }
-    //
-    // document.querySelectorAll('[id*="checkout"]').forEach(function(btn) {
-    //     btn.addEventListener('click', function(e) {
-    //         if (this.tagName === 'A') {
-    //             // Let anchor work normally for now (href="#checkout")
-    //             return;
-    //         }
-    //         e.preventDefault();
-    //         redirectToStripeCheckout();
-    //     });
-    // });
 
     // ==================== VIDEO PREVIEW PLACEHOLDER ====================
     function initVideoPreview() {
@@ -115,17 +121,36 @@
         if (!videoThumb) return;
 
         videoThumb.addEventListener('click', function() {
-            // Placeholder: Replace with actual video modal or redirect
-            alert('Video preview coming soon! Contact help@vespere.ai for a demo.');
+            alert('Video preview coming soon! Contact help@redwand.io for a demo.');
+        });
+    }
+
+    // ==================== STRIPE CHECKOUT ====================
+    function initStripeCheckout() {
+        // Stripe Payment Link (permanent, no secret key needed on frontend)
+        var stripePaymentUrl = 'https://buy.stripe.com/test_eVq14oes6br8cj03aD5Rm0v';
+
+        // All buy/checkout buttons on the page
+        var checkoutButtons = document.querySelectorAll('#nav-checkout-btn, #hero-checkout-btn, #stripe-checkout-btn, #included-cta-btn');
+
+        if (!checkoutButtons.length) return;
+
+        checkoutButtons.forEach(function(btn) {
+            btn.addEventListener('click', function(e) {
+                e.preventDefault();
+                window.location.href = stripePaymentUrl;
+            });
         });
     }
 
     // ==================== INIT ====================
     function init() {
+        initScrollReveal();
         initFAQ();
         initSmoothScroll();
         initHeaderScroll();
         initVideoPreview();
+        initStripeCheckout();
     }
 
     if (document.readyState === 'loading') {

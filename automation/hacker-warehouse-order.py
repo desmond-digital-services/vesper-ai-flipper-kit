@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Hacker Warehouse Ordering Script for Vesper AI Flipper Kit
+Hacker Warehouse Ordering Script for RedWand Flipper Kit
 ===========================================================
 Checks stock, calculates shipping, and generates order summaries
 for Hacker Warehouse (backup supplier).
@@ -439,7 +439,7 @@ def cmd_order(args):
 
 def main():
     parser = argparse.ArgumentParser(
-        description="Hacker Warehouse ordering automation for Vesper AI Flipper Kit",
+        description="Hacker Warehouse ordering automation for RedWand Flipper Kit",
         formatter_class=argparse.RawDescriptionHelpFormatter,
         epilog="""
 Examples:

@@ -1,4 +1,4 @@
-# Vesper AI Project - Deployment Policy
+# RedWand Project - Deployment Policy
 
 **IMPORTANT:** BUILD LOCAL ONLY — NO DEPLOYMENT WITHOUT APPROVAL
 
@@ -15,16 +15,16 @@
 ## Local Build Status
 
 ### ✅ Complete (Local Files Created)
-1. **Documentation** — All 6 files in `~/clawd/projects/vesper-ai/documentation/`
-2. **Landing Page** — All 5 files in `~/clawd/projects/vesper-ai/web/`
+1. **Documentation** — All 6 files in `~/clawd/projects/redwand-ai/documentation/`
+2. **Landing Page** — All 5 files in `~/clawd/projects/redwand-ai/web/`
 
 ### 🔄 In Progress (Building Locally)
-3. **Stripe Integration** — Files will be created in `~/clawd/projects/vesper-ai/backend/`
+3. **Stripe Integration** — Files will be created in `~/clawd/projects/redwand-ai/backend/`
 
 ### ⏳ Pending (Local Build)
-4. **Email System** — Files in `~/clawd/projects/vesper-ai/email-templates/` and `backend/`
-5. **Order Management** — Files in `~/clawd/projects/vesper-ai/backend/` and `web/admin/`
-6. **Hardware Procurement** — Files in `~/clawd/projects/vesper-ai/automation/`
+4. **Email System** — Files in `~/clawd/projects/redwand-ai/email-templates/` and `backend/`
+5. **Order Management** — Files in `~/clawd/projects/redwand-ai/backend/` and `web/admin/`
+6. **Hardware Procurement** — Files in `~/clawd/projects/redwand-ai/automation/`
 
 ---
 
@@ -50,7 +50,7 @@
 ## Local File Structure (What Exists Now)
 
 ```
-~/clawd/projects/vesper-ai/
+~/clawd/projects/redwand-ai/
 ├── docs/
 │   ├── business-plan.md ✅ LOCAL
 │   ├── payment-models-final.md ✅ LOCAL
@@ -62,7 +62,7 @@
 │   ├── js/
 │   │   └── main.js ✅ LOCAL
 │   ├── assets/
-│   │   └── vesper-logo.svg ✅ LOCAL
+│   │   └── redwand-logo.svg ✅ LOCAL
 │   └── checkout.html ⏳ FROM STRIPE AGENT
 ├── backend/
 │   ├── stripe-config.py ⏳ FROM STRIPE AGENT
@@ -101,7 +101,7 @@ Legend: ✅ LOCAL (done, on disk) | ⏳ PENDING (will create locally)
 - [ ] TD says: "Deploy to DreamHost"
 - [ ] Transfer web/ directory via SFTP
 - [ ] Set permissions (755 for directories, 644 for files)
-- [ ] Test vesper-ai.com is live
+- [ ] Test redwand-ai.com is live
 
 ### 2. Stripe Live Mode
 - [ ] TD says: "Switch to live mode"

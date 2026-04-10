@@ -1,4 +1,4 @@
-# Vesper AI Flipper Business - Payment Models (Final Approved Version)
+# RedWand Flipper Business - Payment Models (Final Approved Version)
 
 ## SELECTED MODEL: Option 3 (Full Payment, 7-10 Day Build)
 
@@ -19,7 +19,7 @@
 **Capital Required:** $0 (customer pays first)
 
 **Pricing:**
-- Vesper AI Flipper Kit: $499
+- RedWand Flipper Kit: $499
 - Includes: Flipper Zero, Moto G Play 2026, 32GB SD, cables, API credit
 - Ships: 7-10 business days
 - US only (Phase 1)

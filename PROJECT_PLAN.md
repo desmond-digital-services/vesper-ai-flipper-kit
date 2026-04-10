@@ -1,8 +1,8 @@
-# Vesper AI Flipper Business - Master Project Plan
+# RedWand Flipper Business - Master Project Plan
 
 ## Project Overview
 
-**Objective:** Launch fully automated e-commerce pipeline for Vesper AI Flipper Kit
+**Objective:** Launch fully automated e-commerce pipeline for RedWand Flipper Kit
 
 **Timeline:** 3-4 days to launch
 **Capital Required:** $0 (pre-order model)
@@ -135,7 +135,7 @@
 - index.html
 - css/styles.css
 - js/main.js
-- vesper-logo.svg
+- redwand-logo.svg
 - design-notes.md
 
 **Status:** 🔄 Running
@@ -183,7 +183,7 @@
 ## File Structure (Updated)
 
 ```
-~/clawd/projects/vesper-ai/
+~/clawd/projects/redwand-ai/
 ├── docs/
 │   ├── business-plan.md ✅
 │   ├── payment-models-final.md ✅

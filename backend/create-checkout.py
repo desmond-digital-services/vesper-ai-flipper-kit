@@ -1,5 +1,5 @@
 """
-Stripe Checkout Session Generator for Vesper AI Flipper Kit
+Stripe Checkout Session Generator for RedWand Flipper Kit
 Follows Stripe Best Practices - Uses Checkout Sessions API
 """
 
@@ -19,7 +19,7 @@ class CheckoutGenerator:
         
     def create_checkout_session(self, customer_email=None, customer_name=None):
         """
-        Create a checkout session for Vesper AI Flipper Kit
+        Create a checkout session for RedWand Flipper Kit
         
         Args:
             customer_email: Customer email for the order
@@ -55,10 +55,10 @@ class CheckoutGenerator:
                     'name': customer_name,
                 } if customer_name else None,
                 metadata={
-                    'product': 'vesper-ai-flipper-kit',
+                    'product': 'redwand-ai-flipper-kit',
                     'price': str(PRODUCT_CONFIG['price']),
                     'currency': PRODUCT_CONFIG['currency'],
-                    'source': 'vesper-ai-website',
+                    'source': 'redwand-ai-website',
                 },
                 expires_at_hours=24,  # Session expires in 24 hours
             )

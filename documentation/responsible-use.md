@@ -1,4 +1,4 @@
-# Vesper AI Flipper Kit — Responsible Use Policy
+# RedWand Flipper Kit — Responsible Use Policy
 
 **Effective date: April 2026**
 **Last reviewed: April 2026**
@@ -7,17 +7,17 @@
 
 ## Overview
 
-The Vesper AI Flipper Kit is a general-purpose AI assistant tool designed for legitimate business and personal productivity use. Like any powerful tool, it can be misused. This policy exists to make clear what we expect from users, what we prohibit, and where the line is.
+The RedWand Flipper Kit is a general-purpose AI assistant tool designed for legitimate business and personal productivity use. Like any powerful tool, it can be misused. This policy exists to make clear what we expect from users, what we prohibit, and where the line is.
 
 We built this product to help farmers, managers, field workers, and business professionals get more done. We want it to stay useful, legal, and respected.
 
-Please read this policy carefully. By using the Vesper AI Flipper Kit, you agree to use it responsibly.
+Please read this policy carefully. By using the RedWand Flipper Kit, you agree to use it responsibly.
 
 ---
 
 ## 1. Legitimate Business Applications
 
-We designed the Vesper AI Flipper Kit for legitimate, lawful use. Approved uses include:
+We designed the RedWand Flipper Kit for legitimate, lawful use. Approved uses include:
 
 - **Agricultural operations:** Inventory management, scheduling, field observations, weather tracking, crop planning, livestock management notes
 - **Business productivity:** Note-taking, drafting communications, research, scheduling, documentation
@@ -25,13 +25,13 @@ We designed the Vesper AI Flipper Kit for legitimate, lawful use. Approved uses 
 - **Education and training:** Learning assistance, language translation, research support
 - **Personal productivity:** Reminders, task management, general Q&A, writing assistance
 
-This list is not exhaustive. If you're unsure whether a use is legitimate, ask us at **help@vespere.ai**.
+This list is not exhaustive. If you're unsure whether a use is legitimate, ask us at **help@redwand.io**.
 
 ---
 
 ## 2. Prohibited Uses
 
-**You may not use the Vesper AI Flipper Kit to:**
+**You may not use the RedWand Flipper Kit to:**
 
 ### 2.1 — Unauthorized Access
 - Access any computer system, network, server, database, or device you do not have explicit, current permission to access
@@ -71,7 +71,7 @@ This list is not exhaustive. If you're unsure whether a use is legitimate, ask u
 When using voice commands or data capture features in shared or public spaces, be mindful of the privacy of people around you. Do not record or process personal information about others without appropriate disclosure and consent.
 
 ### 3.2 — Your Own Data
-The Vesper AI Flipper Kit processes your queries through OpenRouter's AI servers. Do not send sensitive personal information (Social Security numbers, financial account details, medical records, passwords, or similar) through the AI unless you are comfortable with that data being processed by a third-party service.
+The RedWand Flipper Kit processes your queries through OpenRouter's AI servers. Do not send sensitive personal information (Social Security numbers, financial account details, medical records, passwords, or similar) through the AI unless you are comfortable with that data being processed by a third-party service.
 
 Review OpenRouter's privacy policy at **openrouter.ai/privacy**.
 
@@ -84,9 +84,9 @@ Do not use the kit or its AI features to assist in infringing on the intellectua
 
 ### 4.1 — Found a Security Issue?
 
-If you discover a security vulnerability in the Vesper AI Flipper Kit hardware, software, or associated services, we want to know.
+If you discover a security vulnerability in the RedWand Flipper Kit hardware, software, or associated services, we want to know.
 
-Please report it to us at **help@vespere.ai** with:
+Please report it to us at **help@redwand.io** with:
 - A description of the vulnerability
 - Steps to reproduce it (if possible)
 - Any potential impact you've identified
@@ -109,7 +109,7 @@ Do not:
 
 ## 5. AI Output Disclaimer
 
-The Vesper AI Flipper Kit uses AI models provided by OpenRouter. AI outputs are generated automatically and are not verified by Vesper staff before delivery.
+The RedWand Flipper Kit uses AI models provided by OpenRouter. AI outputs are generated automatically and are not verified by RedWand staff before delivery.
 
 **You are responsible for verifying AI output before relying on it for:**
 - Medical, legal, financial, or regulatory decisions
@@ -122,7 +122,7 @@ AI can make mistakes. It can produce plausible-sounding but incorrect informatio
 
 ## 6. Compliance with Laws
 
-You are responsible for ensuring that your use of the Vesper AI Flipper Kit complies with all applicable laws in your jurisdiction, including but not limited to:
+You are responsible for ensuring that your use of the RedWand Flipper Kit complies with all applicable laws in your jurisdiction, including but not limited to:
 
 - Telecommunications and device use laws
 - Privacy and data protection regulations (e.g., GDPR, CCPA)
@@ -130,7 +130,7 @@ You are responsible for ensuring that your use of the Vesper AI Flipper Kit comp
 - Export control regulations
 - Professional licensing requirements for your industry
 
-Vesper does not provide legal advice. If you have questions about how the law applies to your specific situation, consult a qualified attorney.
+RedWand does not provide legal advice. If you have questions about how the law applies to your specific situation, consult a qualified attorney.
 
 ---
 
@@ -138,9 +138,9 @@ Vesper does not provide legal advice. If you have questions about how the law ap
 
 ### 7.1 — What Happens If You Violate This Policy
 
-If we determine that you have used the Vesper AI Flipper Kit in violation of this policy:
+If we determine that you have used the RedWand Flipper Kit in violation of this policy:
 
-- We may suspend or terminate your access to Vesper services
+- We may suspend or terminate your access to RedWand services
 - We may disable your API key or associated accounts
 - We may report illegal activity to appropriate law enforcement authorities
 - We reserve the right to pursue legal remedies where appropriate
@@ -159,11 +159,11 @@ We do not continuously monitor what customers do with their kits. However:
 ## 8. Policy Updates
 
 We may update this policy from time to time. When we do:
-- We will post the revised policy on our website at **vespere.ai/responsible-use**
+- We will post the revised policy on our website at **redwand.io/responsible-use**
 - We will update the "Last reviewed" date at the top of this policy
 - For material changes, we will make reasonable efforts to notify users via email or in-app notification
 
-Your continued use of the Vesper AI Flipper Kit after any update constitutes acceptance of the revised policy.
+Your continued use of the RedWand Flipper Kit after any update constitutes acceptance of the revised policy.
 
 ---
 
@@ -171,11 +171,11 @@ Your continued use of the Vesper AI Flipper Kit after any update constitutes acc
 
 Questions about this policy, concerns about potential misuse you've observed, or reports of vulnerabilities:
 
-📧 **Email:** help@vespere.ai
+📧 **Email:** help@redwand.io
 Subject line suggestions: "Responsible Use Question," "Security Vulnerability Report," "Misuse Report"
 
 We take all communications seriously and respond as promptly as circumstances allow.
 
 ---
 
-*Thank you for helping us keep the Vesper AI Flipper Kit a tool that serves legitimate, productive, and lawful purposes.*
+*Thank you for helping us keep the RedWand Flipper Kit a tool that serves legitimate, productive, and lawful purposes.*

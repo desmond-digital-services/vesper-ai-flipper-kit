@@ -1,8 +1,8 @@
-# Vesper AI Flipper Kit — Landing Page Design Notes
+# RedWand Flipper Kit — Landing Page Design Notes
 
 ## Overview
 
-This document covers the design decisions, architecture, and integration points for the Vesper AI Flipper Kit landing page (`vesper-ai/web/`).
+This document covers the design decisions, architecture, and integration points for the RedWand Flipper Kit landing page (`redwand-ai/web/`).
 
 ---
 
@@ -156,7 +156,7 @@ The kit has a 7–10 day build time. If using Stripe:
 ## File Structure
 
 ```
-vesper-ai/
+redwand-ai/
 ├── web/
 │   ├── index.html          # Main landing page (all sections)
 │   ├── css/
@@ -164,7 +164,7 @@ vesper-ai/
 │   ├── js/
 │   │   └── main.js         # FAQ accordion + smooth scroll (~100 lines)
 │   └── assets/
-│       └── vesper-logo.svg  # SVG logo with V letterform + "vesper AI"
+│       └── redwand-logo.svg  # SVG logo with V letterform + "redwand AI"
 ├── docs/
 │   └── design-notes.md      # This document
 └── PROJECT_PLAN.md         # Product/project plan (from TD)

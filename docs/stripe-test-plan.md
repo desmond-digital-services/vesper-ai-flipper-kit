@@ -1,4 +1,4 @@
-# Stripe Testing Plan for Vesper AI Flipper Kit
+# Stripe Testing Plan for RedWand Flipper Kit
 
 ## Testing Phases
 
@@ -17,7 +17,7 @@
 
 **Command:**
 ```bash
-cd ~/clawd/projects/vesper-ai/backend
+cd ~/clawd/projects/redwand-ai/backend
 python3 stripe-config.py
 python3 create-checkout.py
 ```

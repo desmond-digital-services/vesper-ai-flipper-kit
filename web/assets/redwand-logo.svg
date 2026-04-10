@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 140 36" fill="none" role="img" aria-label="Vesper AI Logo">
+  <!-- Logo mark: stylized V with a subtle AI signal dot -->
+  <rect width="140" height="36" fill="none"/>
+  
+  <!-- V letterform -->
+  <path d="M8 8 L20 28 L32 8" stroke="#f0f0f0" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+  
+  <!-- V letterform -->
+  <path d="M33 8 L45 28 L57 8" stroke="#f0f0f0" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+  
+  <!-- AI signal dot (electric blue) -->
+  <circle cx="62" cy="18" r="3.5" fill="#0066ff"/>
+  
+  <!-- Text: "vesper" in clean sans-serif style -->
+  <text x="72" y="24" font-family="Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="18" font-weight="700" fill="#f0f0f0" letter-spacing="-0.02em">vesper</text>
+  
+  <!-- Text: "AI" accent -->
+  <text x="138" y="24" font-family="Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="18" font-weight="400" fill="#0066ff" letter-spacing="-0.01em" text-anchor="end">AI</text>
+</svg>

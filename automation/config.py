@@ -1,5 +1,5 @@
 """
-Vesper AI Flipper Kit - Procurement Configuration
+RedWand Flipper Kit - Procurement Configuration
 =================================================
 Stores supplier credentials, store locations, and product info.
 Copy this to config_secrets.py and fill in your actual values.
@@ -103,8 +103,8 @@ NOTIFICATIONS = {
         "smtp_port": 587,
         "smtp_user": "your-email@gmail.com",
         "smtp_password": "your-app-password",
-        "from_addr": "vesper-procurement@example.com",
-        "to_addrs": ["admin@vesper.ai"],
+        "from_addr": "redwand-procurement@example.com",
+        "to_addrs": ["admin@redwand.ai"],
     },
     "sms": {
         "enabled": False,

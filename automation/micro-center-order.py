@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Micro Center Ordering Script for Vesper AI Flipper Kit
+Micro Center Ordering Script for RedWand Flipper Kit
 =======================================================
 Checks stock, generates shopping lists, and automates Micro Center orders.
 
@@ -252,7 +252,7 @@ def generate_shopping_list(quantity: int = 1) -> dict:
 def print_shopping_list(shopping_list: dict):
     """Pretty print a shopping list."""
     print("\n" + "=" * 60)
-    print("🛒  MICRO CENTER - VESPER AI FLIPPER KIT SHOPPING LIST")
+    print("🛒  MICRO CENTER - RedWand FLIPPER KIT SHOPPING LIST")
     print("=" * 60)
     print(f"Generated: {shopping_list['generated_at']}")
     print(f"Pickup Type: {shopping_list['pickup_type'].upper()}")
@@ -474,7 +474,7 @@ def cmd_order(args):
 
 def main():
     parser = argparse.ArgumentParser(
-        description="Micro Center ordering automation for Vesper AI Flipper Kit",
+        description="Micro Center ordering automation for RedWand Flipper Kit",
         formatter_class=argparse.RawDescriptionHelpFormatter,
         epilog="""
 Examples:

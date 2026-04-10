@@ -1,4 +1,4 @@
-# Vesper AI - Test Status Log
+# RedWand - Test Status Log
 
 **Started:** 2026-04-08 17:20 CDT
 **Tested By:** D.D. (AI Agent)
@@ -213,7 +213,7 @@
 
 ## Notes
 
-- Virtual environment: ~/clawd/projects/vesper-ai/venv
+- Virtual environment: ~/clawd/projects/redwand-ai/venv
 - Local web server: http://localhost:8765 (static file server)
 - Flask API server: Not yet started
 - Database: Not yet initialized

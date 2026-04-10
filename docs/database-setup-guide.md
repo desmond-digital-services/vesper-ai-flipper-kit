@@ -1,6 +1,6 @@
-# Vesper AI Order Database Setup Guide
+# RedWand Order Database Setup Guide
 
-This guide explains how to set up and run the Vesper AI Order Management System locally.
+This guide explains how to set up and run the RedWand Order Management System locally.
 
 ## Prerequisites
 
@@ -11,10 +11,10 @@ This guide explains how to set up and run the Vesper AI Order Management System 
 ## Project Structure
 
 ```
-vesper-ai/
+redwand-ai/
 ├── database/
 │   ├── schema.sql          # Database schema
-│   └── vesper_orders.db    # SQLite database (created on first run)
+│   └── redwand_orders.db    # SQLite database (created on first run)
 ├── backend/
 │   ├── order-manager.py    # Flask API server
 │   ├── email-system.py     # Email automation
@@ -35,7 +35,7 @@ vesper-ai/
 ### 1. Navigate to Project Directory
 
 ```bash
-cd ~/clawd/projects/vesper-ai
+cd ~/clawd/projects/redwand-ai
 ```
 
 ### 2. Install Python Dependencies
@@ -60,7 +60,7 @@ The database is automatically created on first run. To manually initialize:
 cd backend
 python3 -c "
 import sqlite3
-conn = sqlite3.connect('../database/vesper_orders.db')
+conn = sqlite3.connect('../database/redwand_orders.db')
 with open('../database/schema.sql', 'r') as f:
     conn.executescript(f.read())
 conn.close()
@@ -71,26 +71,26 @@ print('Database initialized!')
 ### 4. Start the Backend Server
 
 ```bash
-cd ~/clawd/projects/vesper-ai/backend
+cd ~/clawd/projects/redwand-ai/backend
 python3 order-manager.py
 ```
 
 You should see:
 ```
 Database initialized successfully
-Starting Vesper AI Order Manager on http://localhost:5050
+Starting RedWand Order Manager on http://localhost:5050
 ```
 
 ### 5. Access the Admin Dashboard
 
 Open your browser and go to:
 ```
-file:///Users/scrimwiggins/clawd/projects/vesper-ai/web/admin/index.html
+file:///Users/scrimwiggins/clawd/projects/redwand-ai/web/admin/index.html
 ```
 
 Or serve it locally:
 ```bash
-cd ~/clawd/projects/vesper-ai/web
+cd ~/clawd/projects/redwand-ai/web
 python3 -m http.server 8080
 ```
 Then visit: `http://localhost:8080/admin/index.html`
@@ -171,7 +171,7 @@ The email system logs sent emails to the `email_log` table. To integrate:
 requests.post('http://localhost:5050/api/emails', json={
     'order_id': 'VPR-2026-00001',
     'email_type': 'confirmation',
-    'subject': 'Your Vesper AI Flipper Kit Order',
+    'subject': 'Your RedWand Flipper Kit Order',
     'sent_date': datetime.utcnow().isoformat() + 'Z',
     'status': 'sent',
     'recipient_email': customer_email
@@ -250,7 +250,7 @@ requests.post('http://localhost:5050/api/procurement', json={
 Connect to the database and insert test orders:
 
 ```bash
-sqlite3 ~/clawd/projects/vesper-ai/database/vesper_orders.db
+sqlite3 ~/clawd/projects/redwand-ai/database/redwand_orders.db
 ```
 
 ```sql
@@ -261,9 +261,9 @@ VALUES
 
 INSERT INTO email_log (order_id, email_type, subject, sent_date, status, recipient_email)
 VALUES 
-('VPR-2026-00001', 'confirmation', 'Your Vesper AI Flipper Kit Order', datetime('now'), 'sent', 'john@example.com'),
-('VPR-2026-00002', 'confirmation', 'Your Vesper AI Flipper Kit Order', datetime('now', '-2 days'), 'sent', 'jane@example.com'),
-('VPR-2026-00002', 'shipped', 'Your Vesper AI Flipper Kit Has Shipped!', datetime('now'), 'sent', 'jane@example.com');
+('VPR-2026-00001', 'confirmation', 'Your RedWand Flipper Kit Order', datetime('now'), 'sent', 'john@example.com'),
+('VPR-2026-00002', 'confirmation', 'Your RedWand Flipper Kit Order', datetime('now', '-2 days'), 'sent', 'jane@example.com'),
+('VPR-2026-00002', 'shipped', 'Your RedWand Flipper Kit Has Shipped!', datetime('now'), 'sent', 'jane@example.com');
 
 INSERT INTO hardware_procurement (order_id, supplier, item, cost, order_date, status)
 VALUES 
@@ -308,7 +308,7 @@ curl http://localhost:5050/api/reports/revenue
 
 3. Restart the server:
    ```bash
-   cd ~/clawd/projects/vesper-ai/backend
+   cd ~/clawd/projects/redwand-ai/backend
    python3 order-manager.py
    ```
 

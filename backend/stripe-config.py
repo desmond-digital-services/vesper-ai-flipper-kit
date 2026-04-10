@@ -1,5 +1,5 @@
 """
-Stripe Configuration for Vesper AI Flipper Kit
+Stripe Configuration for RedWand Flipper Kit
 Follows Stripe Best Practices (API version 2026-02-25.clover)
 """
 
@@ -10,7 +10,7 @@ from dotenv import load_dotenv
 load_dotenv()
 
 class StripeConfig:
-    """Stripe API configuration for Vesper AI"""
+    """Stripe API configuration for RedWand"""
     
     def __init__(self):
         self.secret_key = os.getenv('STRIPE_SECRET_KEY', '')
@@ -63,12 +63,12 @@ class StripeConfig:
 
 # Product configuration
 PRODUCT_CONFIG = {
-    'name': 'Vesper AI Flipper Kit',
-    'description': 'Talk to your hardware in plain English. Includes Flipper Zero, Moto G Play, and pre-installed Vesper app.',
+    'name': 'RedWand Flipper Kit',
+    'description': 'Talk to your hardware in plain English. Includes Flipper Zero, Moto G Play, and pre-installed RedWand app.',
     'price': 49900,  # $499 in cents
     'currency': 'usd',
 }
 
 # Success and cancel URLs
-SUCCESS_URL = os.getenv('STRIPE_SUCCESS_URL', 'https://vespere.ai/success')
-CANCEL_URL = os.getenv('STRIPE_CANCEL_URL', 'https://vespere.ai/cancel')
+SUCCESS_URL = os.getenv('STRIPE_SUCCESS_URL', 'https://redwand.io/success')
+CANCEL_URL = os.getenv('STRIPE_CANCEL_URL', 'https://redwand.io/cancel')

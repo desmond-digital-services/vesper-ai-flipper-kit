@@ -1,4 +1,4 @@
-# Vesper AI Project - Sub-Agent Status
+# RedWand Project - Sub-Agent Status
 
 **Last Updated:** 2026-04-08 14:38 CDT
 **Overall Status:** 🔄 IN PROGRESS - 5/6 complete
@@ -26,12 +26,12 @@
 **Status:** COMPLETED SUCCESSFULLY
 
 **Deliverables (6 files):**
-1. `~/clawd/projects/vesper-ai/documentation/setup-guide.md` (1,088 words)
-2. `~/clawd/projects/vesper-ai/documentation/assembly-sop.md` (1,862 words)
-3. `~/clawd/projects/vesper-ai/documentation/instruction-card-design.md` (1,301 words)
-4. `~/clawd/projects/vesper-ai/documentation/troubleshooting.md` (2,002 words)
-5. `~/clawd/projects/vesper-ai/documentation/faq.md` (1,488 words)
-6. `~/clawd/projects/vesper-ai/documentation/responsible-use.md` (1,262 words)
+1. `~/clawd/projects/redwand-ai/documentation/setup-guide.md` (1,088 words)
+2. `~/clawd/projects/redwand-ai/documentation/assembly-sop.md` (1,862 words)
+3. `~/clawd/projects/redwand-ai/documentation/instruction-card-design.md` (1,301 words)
+4. `~/clawd/projects/redwand-ai/documentation/troubleshooting.md` (2,002 words)
+5. `~/clawd/projects/redwand-ai/documentation/faq.md` (1,488 words)
+6. `~/clawd/projects/redwand-ai/documentation/responsible-use.md` (1,262 words)
 
 **Total:** 9,003 words
 
@@ -43,11 +43,11 @@
 **Status:** COMPLETED SUCCESSFULLY
 
 **Deliverables (5 files):**
-1. `~/clawd/projects/vesper-ai/web/index.html` (41KB)
-2. `~/clawd/projects/vesper-ai/web/css/styles.css` (20KB)
-3. `~/clawd/projects/vesper-ai/web/js/main.js` (~3KB)
-4. `~/clawd/projects/vesper-ai/web/assets/vesper-logo.svg` (1KB)
-5. `~/clawd/projects/vesper-ai/docs/design-notes.md` (7.5KB)
+1. `~/clawd/projects/redwand-ai/web/index.html` (41KB)
+2. `~/clawd/projects/redwand-ai/web/css/styles.css` (20KB)
+3. `~/clawd/projects/redwand-ai/web/js/main.js` (~3KB)
+4. `~/clawd/projects/redwand-ai/web/assets/redwand-logo.svg` (1KB)
+5. `~/clawd/projects/redwand-ai/docs/design-notes.md` (7.5KB)
 
 ---
 
@@ -57,13 +57,13 @@
 **Status:** COMPLETED SUCCESSFULLY
 
 **Deliverables (7 files):**
-1. `~/clawd/projects/vesper-ai/email-templates/order-confirmation.html` (12KB)
-2. `~/clawd/projects/vesper-ai/email-templates/build-progress.html` (9KB)
-3. `~/clawd/projects/vesper-ai/email-templates/shipped.html` (9KB)
-4. `~/clawd/projects/vesper-ai/email-templates/followup.html` (8KB)
-5. `~/clawd/projects/vesper-ai/email-templates/payment-failed.html` (8KB)
-6. `~/clawd/projects/vesper-ai/backend/email-system.py` (23KB)
-7. `~/clawd/projects/vesper-ai/docs/email-setup-guide.md` (9KB)
+1. `~/clawd/projects/redwand-ai/email-templates/order-confirmation.html` (12KB)
+2. `~/clawd/projects/redwand-ai/email-templates/build-progress.html` (9KB)
+3. `~/clawd/projects/redwand-ai/email-templates/shipped.html` (9KB)
+4. `~/clawd/projects/redwand-ai/email-templates/followup.html` (8KB)
+5. `~/clawd/projects/redwand-ai/email-templates/payment-failed.html` (8KB)
+6. `~/clawd/projects/redwand-ai/backend/email-system.py` (23KB)
+7. `~/clawd/projects/redwand-ai/docs/email-setup-guide.md` (9KB)
 
 ---
 
@@ -73,11 +73,11 @@
 **Status:** COMPLETED (files created, then agent finished)
 
 **Deliverables (5 files):**
-1. `~/clawd/projects/vesper-ai/backend/stripe-config.py` (2.7KB)
-2. `~/clawd/projects/vesper-ai/backend/create-checkout.py` (2.7KB)
-3. `~/clawd/projects/vesper-ai/backend/webhooks.py` (2.7KB)
-4. `~/clawd/projects/vesper-ai/docs/stripe-setup-guide.md` (4KB)
-5. `~/clawd/projects/vesper-ai/docs/stripe-test-plan.md` (6.5KB)
+1. `~/clawd/projects/redwand-ai/backend/stripe-config.py` (2.7KB)
+2. `~/clawd/projects/redwand-ai/backend/create-checkout.py` (2.7KB)
+3. `~/clawd/projects/redwand-ai/backend/webhooks.py` (2.7KB)
+4. `~/clawd/projects/redwand-ai/docs/stripe-setup-guide.md` (4KB)
+5. `~/clawd/projects/redwand-ai/docs/stripe-test-plan.md` (6.5KB)
 
 **API Version:** 2026-02-25.clover (latest)
 **Best Practices:** Checkout Sessions, webhooks, test mode
@@ -90,13 +90,13 @@
 **Status:** COMPLETED SUCCESSFULLY
 
 **Deliverables (7 files):**
-1. `~/clawd/projects/vesper-ai/automation/config.py` (central config)
-2. `~/clawd/projects/vesper-ai/automation/micro-center-order.py` (Micro Center ordering)
-3. `~/clawd/projects/vesper-ai/automation/hacker-warehouse-order.py` (Hacker Warehouse)
-4. `~/clawd/projects/vesper-ai/automation/stock-checker.py` (multi-supplier monitoring)
-5. `~/clawd/projects/vesper-ai/automation/order-tracker.py` (order lifecycle)
-6. `~/clawd/projects/vesper-ai/email-templates/supplier-inquiry.html` (4 supplier email templates)
-7. `~/clawd/projects/vesper-ai/docs/procurement-setup-guide.md` (setup guide)
+1. `~/clawd/projects/redwand-ai/automation/config.py` (central config)
+2. `~/clawd/projects/redwand-ai/automation/micro-center-order.py` (Micro Center ordering)
+3. `~/clawd/projects/redwand-ai/automation/hacker-warehouse-order.py` (Hacker Warehouse)
+4. `~/clawd/projects/redwand-ai/automation/stock-checker.py` (multi-supplier monitoring)
+5. `~/clawd/projects/redwand-ai/automation/order-tracker.py` (order lifecycle)
+6. `~/clawd/projects/redwand-ai/email-templates/supplier-inquiry.html` (4 supplier email templates)
+7. `~/clawd/projects/redwand-ai/docs/procurement-setup-guide.md` (setup guide)
 
 **Key Features:**
 - Stock checker for 3 suppliers
@@ -152,7 +152,7 @@
 ## File Structure Status (Final)
 
 ```
-~/clawd/projects/vesper-ai/
+~/clawd/projects/redwand-ai/
 ├── docs/
 │   ├── business-plan.md ✅
 │   ├── payment-models-final.md ✅
@@ -169,7 +169,7 @@
 │   ├── js/
 │   │   └── main.js ✅
 │   ├── assets/
-│   │   └── vesper-logo.svg ✅
+│   │   └── redwand-logo.svg ✅
 │   └── admin/
 │       ├── index.html ⏳ (from Order agent)
 │       └── js/

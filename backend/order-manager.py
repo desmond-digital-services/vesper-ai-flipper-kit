@@ -1,5 +1,5 @@
 """
-Vesper AI Flipper Kit - Order Management System
+RedWand Flipper Kit - Order Management System
 Flask REST API with SQLite backend
 """
 
@@ -11,7 +11,7 @@ from flask import Flask, request, jsonify, g
 from functools import wraps
 
 app = Flask(__name__)
-app.config['DATABASE'] = '../database/vesper_orders.db'
+app.config['DATABASE'] = '../database/redwand_orders.db'
 
 # ============================================
 # DATABASE HELPERS
@@ -748,7 +748,7 @@ def export_orders():
     
     return '\n'.join(csv_lines), 200, {
         'Content-Type': 'text/csv',
-        'Content-Disposition': 'attachment; filename=vesper-orders-export.csv'
+        'Content-Disposition': 'attachment; filename=redwand-orders-export.csv'
     }
 
 # ============================================
@@ -781,5 +781,5 @@ if __name__ == '__main__':
     import os
     os.makedirs('database', exist_ok=True)
     init_db()
-    print("Starting Vesper AI Order Manager on http://localhost:5050")
+    print("Starting RedWand Order Manager on http://localhost:5050")
     app.run(host='0.0.0.0', port=5050, debug=True)

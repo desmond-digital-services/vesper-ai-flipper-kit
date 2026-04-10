@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Order Tracker for Vesper AI Flipper Kit
+Order Tracker for RedWand Flipper Kit
 =======================================
 Tracks procurement orders across suppliers, updates status,
 and calculates cost variance.
@@ -563,7 +563,7 @@ def cmd_summary(args):
 
 def main():
     parser = argparse.ArgumentParser(
-        description="Order tracker for Vesper AI Flipper Kit procurement",
+        description="Order tracker for RedWand Flipper Kit procurement",
         formatter_class=argparse.RawDescriptionHelpFormatter,
         epilog="""
 Examples:

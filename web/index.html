@@ -3,22 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vesper AI Flipper Kit — Security Testing for Everyone</title>
+    <title>RedWand Flipper Kit — Security Testing for Everyone</title>
     <meta name="description" content="Talk to your Flipper Zero in plain English. No coding required. Pre-assembled and ready in 60 seconds.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/styles.css">
     <!-- Stripe.js for checkout -->
-    <script src="https://js.stripe.com/v3/"></script>
+    <!-- Stripe Payment Link handles checkout — no client-side SDK needed -->
 </head>
 <body>
 
     <!-- ==================== HEADER / NAV ==================== -->
     <header class="site-header">
         <div class="container header-inner">
-            <a href="#" class="logo" aria-label="Vesper AI Home">
-                <img src="assets/vesper-logo.svg" alt="Vesper AI" width="140" height="36">
+            <a href="#" class="logo" aria-label="RedWand Home">
+                <img src="assets/redwand-logo.svg" alt="RedWand" width="140" height="36">
             </a>
             <nav class="header-nav" aria-label="Main navigation">
                 <a href="#whats-included">What's Included</a>
@@ -76,18 +76,7 @@
                 </div>
                 <div class="hero-visual">
                     <div class="hero-product-image">
-                        <!-- Placeholder product visual — replace with actual product photo -->
-                        <div class="product-placeholder">
-                            <svg width="80" height="80" viewBox="0 0 80 80" fill="none" aria-hidden="true">
-                                <rect x="16" y="12" width="48" height="56" rx="6" fill="#2a2a2a" stroke="#333" stroke-width="1.5"/>
-                                <rect x="22" y="18" width="36" height="28" rx="3" fill="#111"/>
-                                <rect x="28" y="52" width="24" height="8" rx="2" fill="#333"/>
-                                <circle cx="40" cy="32" r="6" fill="#0066ff" opacity="0.4"/>
-                                <path d="M37 32L39.5 34.5L43 30" stroke="#0066ff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                            </svg>
-                            <p class="placeholder-label">Flipper Zero + Moto G Play</p>
-                            <p class="placeholder-sublabel">Vesper AI app pre-installed</p>
-                        </div>
+                        <img src="assets/hero-products.svg" alt="Flipper Zero and Moto G Play with RedWand app" width="800" height="500" loading="eager">
                     </div>
                 </div>
             </div>
@@ -186,7 +175,7 @@
                         </div>
                         <div class="included-text">
                             <h4>Motorola Moto G Play 2026</h4>
-                            <p>Vesper app pre-installed and configured. Just pair and go.</p>
+                            <p>RedWand app pre-installed and configured. Just pair and go.</p>
                         </div>
                     </div>
                     <div class="included-item">
@@ -231,7 +220,7 @@
                 </div>
                 <!-- STRIPE_INTEGRATION_POINT: Secondary purchase CTA -->
                 <div class="included-cta">
-                    <a href="#checkout" class="btn btn-primary btn-lg">Get Your Kit — $499</a>
+                    <a href="#checkout" class="btn btn-primary btn-lg" id="included-cta-btn">Get Your Kit — $499</a>
                     <p class="cta-note">Free shipping within the US. International shipping available at checkout.</p>
                 </div>
             </div>
@@ -322,7 +311,7 @@
                         <div class="step-number">2</div>
                         <div class="step-content">
                             <h3>Pair Bluetooth (3 minutes)</h3>
-                            <p>Open the Vesper app, tap to pair with your Flipper Zero. It happens automatically.</p>
+                            <p>Open the RedWand app, tap to pair with your Flipper Zero. It happens automatically.</p>
                         </div>
                     </div>
                     <div class="setup-connector" aria-hidden="true">
@@ -385,7 +374,7 @@
                                     <rect x="44" y="44" width="4" height="4" fill="#1a1a1a"/>
                                     <rect x="52" y="52" width="4" height="4" fill="#1a1a1a"/>
                                 </svg>
-                                <span>vespere.ai/setup-video</span>
+                                <span>redwand.io/setup-video</span>
                             </div>
                         </div>
                     </div>
@@ -399,7 +388,7 @@
                 <div class="proof-stats">
                     <div class="proof-stat">
                         <span class="proof-number">50+</span>
-                        <span class="proof-label">Farms using Vesper kits</span>
+                        <span class="proof-label">Farms using RedWand kits</span>
                     </div>
                     <div class="proof-stat">
                         <span class="proof-number">4.9<span class="proof-star">★</span></span>
@@ -416,7 +405,7 @@
                             <svg width="16" height="16" viewBox="0 0 16 16" fill="#0066ff" aria-hidden="true"><path d="M8 1l1.8 3.6 4 .6-2.9 2.8.7 4L8 10.4 4.4 12l.7-4L2.2 5.2l4-.6L8 1z"/></svg>
                         </div>
                         <blockquote>
-                            <p>"We needed to test 40 irrigation sensors across the property. The Vesper kit made it a one-person job. I asked it to read each sensor and got instant results — no RF knowledge required."</p>
+                            <p>"We needed to test 40 irrigation sensors across the property. The RedWand kit made it a one-person job. I asked it to read each sensor and got instant results — no RF knowledge required."</p>
                         </blockquote>
                         <cite>— <span class="testimonial-name">Placeholder: Farm Owner, Texas</span></cite>
                     </div>
@@ -474,7 +463,7 @@
                             </svg>
                         </button>
                         <div class="faq-answer" id="faq-3" hidden>
-                            <p>Yes — the Vesper app runs on any Android phone (Android 8.0+). The included Moto G Play is pre-configured and ready to go, but you can install the Vesper app on your own Android device if you prefer. iOS support is on the roadmap.</p>
+                            <p>Yes — the RedWand app runs on any Android phone (Android 8.0+). The included Moto G Play is pre-configured and ready to go, but you can install the RedWand app on your own Android device if you prefer. iOS support is on the roadmap.</p>
                         </div>
                     </div>
                     <div class="faq-item" role="listitem">
@@ -485,7 +474,7 @@
                             </svg>
                         </button>
                         <div class="faq-answer" id="faq-4" hidden>
-                            <p>We offer a 30-day return policy — no questions asked. If your kit has any hardware issues, contact us at <a href="mailto:help@vespere.ai">help@vespere.ai</a> and we'll sort it out. We also provide email support for setup questions.</p>
+                            <p>We offer a 30-day return policy — no questions asked. If your kit has any hardware issues, contact us at <a href="mailto:help@redwand.io">help@redwand.io</a> and we'll sort it out. We also provide email support for setup questions.</p>
                         </div>
                     </div>
                     <div class="faq-item" role="listitem">
@@ -507,7 +496,7 @@
                             </svg>
                         </button>
                         <div class="faq-answer" id="faq-6" hidden>
-                            <p>The Vesper kit is a professional testing tool for authorized security auditing, equipment verification, and legitimate research. It's your responsibility to use it lawfully. Do not use it on systems you don't have permission to test. Responsible use is a core condition of purchase.</p>
+                            <p>The RedWand kit is a professional testing tool for authorized security auditing, equipment verification, and legitimate research. It's your responsibility to use it lawfully. Do not use it on systems you don't have permission to test. Responsible use is a core condition of purchase.</p>
                         </div>
                     </div>
                 </div>
@@ -528,7 +517,7 @@
                             </li>
                             <li>
                                 <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8l3.5 3.5L13 5" stroke="#0066ff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-                                Motorola Moto G Play 2026 (Vesper app installed)
+                                Motorola Moto G Play 2026 (RedWand app installed)
                             </li>
                             <li>
                                 <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8l3.5 3.5L13 5" stroke="#0066ff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
@@ -571,7 +560,7 @@
     <footer class="site-footer">
         <div class="container footer-inner">
             <div class="footer-brand">
-                <img src="assets/vesper-logo.svg" alt="Vesper AI" width="120" height="31">
+                <img src="assets/redwand-logo.svg" alt="RedWand" width="120" height="31">
                 <p>Security testing tools for people who have better things to do than read RF documentation.</p>
             </div>
             <div class="footer-links">
@@ -584,7 +573,7 @@
                 </div>
                 <div class="footer-col">
                     <h5>Support</h5>
-                    <a href="mailto:help@vespere.ai">help@vespere.ai</a>
+                    <a href="mailto:help@redwand.io">help@redwand.io</a>
                     <a href="#faq">Common Questions</a>
                 </div>
                 <div class="footer-col">
@@ -597,9 +586,9 @@
         </div>
         <div class="container footer-bottom">
             <p class="disclaimer">
-                <strong>Responsible Use Required:</strong> The Vesper AI Flipper Kit is intended for authorized security testing, equipment auditing, and legitimate research only. Misuse of this tool may violate local, state, national, or international laws. The user is solely responsible for ensuring their use cases are legal in their jurisdiction. Vesper AI, LLC accepts no liability for misuse.
+                <strong>Responsible Use Required:</strong> The RedWand Flipper Kit is intended for authorized security testing, equipment auditing, and legitimate research only. Misuse of this tool may violate local, state, national, or international laws. The user is solely responsible for ensuring their use cases are legal in their jurisdiction. RedWand, LLC accepts no liability for misuse.
             </p>
-            <p class="copyright">&copy; 2026 Vesper AI, LLC. All rights reserved.</p>
+            <p class="copyright">&copy; 2026 RedWand, LLC. All rights reserved.</p>
         </div>
     </footer>
 

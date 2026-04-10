@@ -1,5 +1,5 @@
 /**
- * Vesper AI Admin Dashboard - JavaScript
+ * RedWand Admin Dashboard - JavaScript
  * Handles all frontend interactions
  */
 
@@ -548,7 +548,7 @@ async function exportOrders() {
         const url = URL.createObjectURL(blob);
         const a = document.createElement('a');
         a.href = url;
-        a.download = `vesper-orders-${new Date().toISOString().split('T')[0]}.csv`;
+        a.download = `redwand-orders-${new Date().toISOString().split('T')[0]}.csv`;
         a.click();
         URL.revokeObjectURL(url);
         showToast('Export downloaded!', 'success');

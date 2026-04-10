@@ -1,5 +1,5 @@
 """
-Stripe Webhook Handler for Vesper AI Flipper Kit
+Stripe Webhook Handler for RedWand Flipper Kit
 Handles payment events: checkout.session.completed, payment_intent.succeeded, payment_intent.payment_failed
 """
 

@@ -1,4 +1,4 @@
-# Vesper AI - Stripe Testing Complete
+# RedWand - Stripe Testing Complete
 
 **Status:** ✅ STRIPE INTEGRATION WORKING
 
@@ -13,7 +13,7 @@
 
 ### 2. Product Creation ✅
 - Product ID: `prod_UIfo7rpi2rt24J`
-- Name: "Vesper AI Flipper Kit"
+- Name: "RedWand Flipper Kit"
 - Description: Complete with metadata
 
 ### 3. Price Creation ✅
@@ -89,7 +89,7 @@ To enable full webhook verification:
 | Static Web Server | http://localhost:8765 | ✅ Running |
 | Flask API Server | http://localhost:5050 | ✅ Running |
 | Webhook Server | http://localhost:5051 | ✅ Running |
-| Database | ~/clawd/projects/vesper-ai/database/vesper.db | ✅ Initialized |
+| Database | ~/clawd/projects/redwand-ai/database/redwand.db | ✅ Initialized |
 
 ---
 
@@ -114,7 +114,7 @@ To enable full webhook verification:
 ## Files Updated
 
 - backend/.stripe.env - Added Stripe test keys
-- backend/vesper_stripe_test.py - Stripe integration test script
+- backend/redwand_stripe_test.py - Stripe integration test script
 - backend/webhook-server.py - Webhook event handler
 - web/success.html - Payment success page
 - web/cancel.html - Payment cancel page

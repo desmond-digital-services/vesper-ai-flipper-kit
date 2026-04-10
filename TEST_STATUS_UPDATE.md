@@ -1,4 +1,4 @@
-# Vesper AI - Test Status Update
+# RedWand - Test Status Update
 
 **Updated:** 2026-04-08 17:30 CDT
 **Progress:** 40% Complete
@@ -52,8 +52,8 @@
 
 - ✅ Static web server: http://localhost:8765
 - ✅ Flask API server: http://localhost:5050
-- ✅ Database: ~/clawd/projects/vesper-ai/database/vesper.db
-- ✅ Virtual environment: ~/clawd/projects/vesper-ai/venv
+- ✅ Database: ~/clawd/projects/redwand-ai/database/redwand.db
+- ✅ Virtual environment: ~/clawd/projects/redwand-ai/venv
 
 ---
 

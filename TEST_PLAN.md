@@ -1,4 +1,4 @@
-# Vesper AI - Comprehensive Local Testing Plan
+# RedWand - Comprehensive Local Testing Plan
 
 **Date:** 2026-04-08
 **Goal:** Verify all systems work locally before deployment

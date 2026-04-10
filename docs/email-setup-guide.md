@@ -1,8 +1,8 @@
-# Vesper AI Email System - Setup Guide
+# RedWand Email System - Setup Guide
 
 ## Overview
 
-The Vesper AI Email Automation System provides automated customer notifications throughout the Flipper Kit order lifecycle:
+The RedWand Email Automation System provides automated customer notifications throughout the Flipper Kit order lifecycle:
 
 | Email Type | Timing | Purpose |
 |------------|--------|---------|
@@ -15,7 +15,7 @@ The Vesper AI Email Automation System provides automated customer notifications 
 ## Directory Structure
 
 ```
-projects/vesper-ai/
+projects/redwand-ai/
 ├── email-templates/
 │   ├── order-confirmation.html
 │   ├── build-progress.html
@@ -44,7 +44,7 @@ No external dependencies required - uses Python standard library only.
 
 ### 3. Configure Environment Variables
 
-Create a `.env` file in `projects/vesper-ai/`:
+Create a `.env` file in `projects/redwand-ai/`:
 
 ```bash
 # SMTP Configuration
@@ -55,9 +55,9 @@ SMTP_PASSWORD=your-app-password
 SMTP_USE_TLS=true
 
 # Email Addresses
-FROM_EMAIL=noreply@vespere.ai
-FROM_NAME=Vesper AI
-REPLY_TO=help@vespere.ai
+FROM_EMAIL=noreply@redwand.io
+FROM_NAME=RedWand
+REPLY_TO=help@redwand.io
 
 # Debug mode (set to 'true' for testing without sending)
 EMAIL_DEBUG=false
@@ -134,10 +134,10 @@ python backend/email-system.py test
 ### Python API
 
 ```python
-from backend.email_system import VesperEmailSystem
+from backend.email_system import RedWandEmailSystem
 
 # Initialize
-email_system = VesperEmailSystem()
+email_system = RedWandEmailSystem()
 
 # Send order confirmation
 email_system.send_order_confirmation(
@@ -164,10 +164,10 @@ Add to crontab for automated processing:
 
 ```bash
 # Run batch every hour during business hours
-0 9-17 * * * cd /path/to/projects/vesper-ai && python backend/email-system.py batch >> logs/email-cron.log 2>&1
+0 9-17 * * * cd /path/to/projects/redwand-ai && python backend/email-system.py batch >> logs/email-cron.log 2>&1
 
 # Or run daily at 9am
-0 9 * * * cd /path/to/projects/vesper-ai && python backend/email-system.py batch >> logs/email-cron.log 2>&1
+0 9 * * * cd /path/to/projects/redwand-ai && python backend/email-system.py batch >> logs/email-cron.log 2>&1
 ```
 
 ## Email Template Variables
@@ -241,7 +241,7 @@ When a new order is placed:
 
 ```python
 # In your order processing code
-email_system = VesperEmailSystem()
+email_system = RedWandEmailSystem()
 
 # Send confirmation immediately
 email_system.send_order_confirmation(
@@ -330,5 +330,5 @@ This will show what would be sent without actually delivering emails.
 ## Support
 
 For issues:
-- Email: help@vespere.ai
-- Documentation: https://vespere.ai/docs/email-system
+- Email: help@redwand.io
+- Documentation: https://redwand.io/docs/email-system

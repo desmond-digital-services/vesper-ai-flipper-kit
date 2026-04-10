@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Supplier Stock Checker for Vesper AI Flipper Kit
+Supplier Stock Checker for RedWand Flipper Kit
 ================================================
 Monitors stock levels across all suppliers and sends alerts.
 
@@ -12,7 +12,7 @@ Usage:
 
 Scheduling (cron):
     # Check every day at 8am
-    0 8 * * * cd /path/to/vesper-ai/automation && python stock-checker.py check --quiet
+    0 8 * * * cd /path/to/redwand-ai/automation && python stock-checker.py check --quiet
 
 Requirements:
     pip install requests beautifulsoup4
@@ -509,7 +509,7 @@ def generate_stock_report() -> dict:
 def print_stock_report(report: dict):
     """Pretty print a stock report."""
     print("\n" + "=" * 70)
-    print("📊 VESPER AI FLIPPER KIT - STOCK STATUS REPORT")
+    print("📊 RedWand FLIPPER KIT - STOCK STATUS REPORT")
     print(f"Generated: {report['generated_at']}")
     print("=" * 70)
     
@@ -687,7 +687,7 @@ def cmd_find_supplier(args):
 
 def main():
     parser = argparse.ArgumentParser(
-        description="Stock checker for Vesper AI Flipper Kit suppliers",
+        description="Stock checker for RedWand Flipper Kit suppliers",
         formatter_class=argparse.RawDescriptionHelpFormatter,
         epilog="""
 Examples:

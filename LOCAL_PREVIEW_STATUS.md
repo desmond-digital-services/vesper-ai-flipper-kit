@@ -1,4 +1,4 @@
-# Vesper AI Project - Local Preview Live
+# RedWand Project - Local Preview Live
 
 **Last Updated:** 2026-04-08 15:05 CDT
 **Status:** 🌐 LOCAL PREVIEW ACTIVE
@@ -23,7 +23,7 @@
 
 ## What You're Seeing
 
-**Vesper AI Flipper Kit Landing Page:**
+**RedWand Flipper Kit Landing Page:**
 - Hero section with "Security Testing for People Who Don't Know What Sub-GHz Is"
 - Professional design (charcoal #1a1a1a + electric blue #0066ff)
 - 8-page layout (hero, benefits, what's included, who's for, setup, FAQ, footer)

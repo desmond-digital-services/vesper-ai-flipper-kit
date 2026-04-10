@@ -1,4 +1,4 @@
-# 🎯 WAKE UP - VESPER AI READY TO DEPLOY
+# 🎯 WAKE UP - RedWand READY TO DEPLOY
 
 **Hey TD - Stripe testing complete!**
 
@@ -18,7 +18,7 @@ All systems tested and working. Ready for deployment to desmond-digital.com/flip
 - API connection verified
 
 ### Phase 2: Stripe Integration ✅
-- Created product: "Vesper AI Flipper Kit" (prod_UIfo7rpi2rt24J)
+- Created product: "RedWand Flipper Kit" (prod_UIfo7rpi2rt24J)
 - Created price: $499.00 USD (price_1TK4SdLsFGgDJNDqd1adv6Vj)
 - Generated checkout session
 - Test checkout URL created
@@ -70,7 +70,7 @@ All systems tested and working. Ready for deployment to desmond-digital.com/flip
 - Flask API: http://localhost:5050
 - Webhook server: http://localhost:5051
 
-**Database:** ~/clawd/projects/vesper-ai/database/vesper.db
+**Database:** ~/clawd/projects/redwand-ai/database/redwand.db
 - Test order: VPR-2026-00001
 - Revenue tracked: $499.00
 
@@ -78,7 +78,7 @@ All systems tested and working. Ready for deployment to desmond-digital.com/flip
 
 ## Stripe Test Details
 
-**Product:** Vesper AI Flipper Kit
+**Product:** RedWand Flipper Kit
 **Price:** $499.00
 **Test Checkout URL:** [Link in STRIPE_TEST_COMPLETE.md]
 
@@ -92,7 +92,7 @@ All systems tested and working. Ready for deployment to desmond-digital.com/flip
 
 ### Stripe Integration
 - backend/.stripe.env - Stripe test keys configured
-- backend/vesper_stripe_test.py - Test script
+- backend/redwand_stripe_test.py - Test script
 - backend/webhook-server.py - Webhook handler
 - web/success.html - Payment success page
 - web/cancel.html - Payment cancel page

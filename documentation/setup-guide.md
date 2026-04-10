@@ -1,4 +1,4 @@
-# Vesper AI Flipper Kit — 60-Second Setup Guide
+# RedWand Flipper Kit — 60-Second Setup Guide
 
 **Estimated Time: 60 seconds**
 **Difficulty: None. Seriously.**
@@ -9,7 +9,7 @@
 
 Make sure your phone or tablet has Bluetooth turned on. You'll need it for this.
 
-Have your OpenRouter API key ready. If you don't have one yet, the Vesper app will walk you through getting one — it takes about 2 minutes.
+Have your OpenRouter API key ready. If you don't have one yet, the RedWand app will walk you through getting one — it takes about 2 minutes.
 
 ---
 
@@ -38,7 +38,7 @@ Your Flipper ships with the battery switched off to keep it safe during shipping
 
 **Slide it to ON.**
 
-The screen on your Flipper will light up and show the Vesper logo or a "ready" screen within about 5 seconds.
+The screen on your Flipper will light up and show the RedWand logo or a "ready" screen within about 5 seconds.
 
 > **If the screen stays dark:** Plug the USB-C cable into a power source and let it charge for 10 minutes. Then try again.
 
@@ -68,12 +68,12 @@ Your Flipper connects to your phone or tablet using Bluetooth — no internet re
 
 ---
 
-## Step 4: Install and Open the Vesper App
+## Step 4: Install and Open the RedWand App
 
 1. Scan the QR code on the quick-start card with your phone camera
 2. Tap the link that appears to open the download page
-3. Download the **Vesper app** (available for Android and iOS)
-4. Open the Vesper app
+3. Download the **RedWand app** (available for Android and iOS)
+4. Open the RedWand app
 5. Tap **"Add Device"** or **"Connect Flipper"**
 
 The app will guide you through granting Bluetooth permissions if it asks.
@@ -86,19 +86,19 @@ The app will guide you through granting Bluetooth permissions if it asks.
 
 ## Step 5: Enter Your OpenRouter API Key
 
-The Vesper app uses the OpenRouter service to power the AI. You need your own API key — it's free to start.
+The RedWand app uses the OpenRouter service to power the AI. You need your own API key — it's free to start.
 
 ### Getting Your API Key (about 2 minutes):
 1. Visit **openrouter.ai** on your phone or computer
 2. Tap **"Sign Up"** and create an account (use Google or email)
 3. Once logged in, go to **"Keys"** in the top menu
 4. Tap **"Create Key"**
-5. Give it a name like "Vesper Kit" (optional)
+5. Give it a name like "RedWand Kit" (optional)
 6. Copy the key — it looks like this: `sk-or-v1-a1b2c3d4e5f6...`
 7. **Never share this key with anyone.**
 
-### Entering Your Key in Vesper:
-1. In the Vesper app, tap **"Enter API Key"**
+### Entering Your Key in RedWand:
+1. In the RedWand app, tap **"Enter API Key"**
 2. Paste your OpenRouter key
 3. Tap **"Save"** or **"Connect"**
 4. The app will confirm when the connection is working
@@ -112,7 +112,7 @@ The Vesper app uses the OpenRouter service to power the AI. You need your own AP
 Time to try it out.
 
 1. Make sure your Flipper is powered on and connected to your phone via Bluetooth
-2. Open the Vesper app if it's not already open
+2. Open the RedWand app if it's not already open
 3. Tap the **microphone button** (or type if you prefer)
 4. Say or type: **"Read this card"**
 
@@ -134,8 +134,8 @@ The Flipper will respond — watch the screen and listen if your device has spea
 - Restart your Flipper by holding the power button for 3 seconds to turn it off, then press it again to turn it on
 - Make sure no other device is already connected to your Flipper
 
-**Vesper app can't find your Flipper:**
-- Close the Vesper app completely and reopen it
+**RedWand app can't find your Flipper:**
+- Close the RedWand app completely and reopen it
 - Check that your Flipper appears in your phone's Bluetooth settings (not just in the app)
 - Try forgetting the Flipper from your Bluetooth settings and pairing again
 
@@ -148,10 +148,10 @@ The Flipper will respond — watch the screen and listen if your device has spea
 
 ## Need More Help?
 
-- **Email:** help@vespere.ai
+- **Email:** help@redwand.io
 - **Troubleshooting Guide:** Scan the QR code on the back of your quick-start card
 - **Setup Video:** Scan the QR code on the front of your quick-start card
 
 ---
 
-*Your Vesper AI Flipper Kit is designed to work right out of the box. If you're running into issues, we're here to help — reach out anytime.*
+*Your RedWand Flipper Kit is designed to work right out of the box. If you're running into issues, we're here to help — reach out anytime.*

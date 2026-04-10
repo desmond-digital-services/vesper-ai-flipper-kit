@@ -1,4 +1,4 @@
-# Vesper AI Project - Final Summary
+# RedWand Project - Final Summary
 
 **Date:** 2026-04-08
 **Status:** 🎉 COMPLETE — PUSHED TO GITHUB
@@ -7,12 +7,12 @@
 
 ## GitHub Repository
 
-**Repository:** https://github.com/desmond-digital-services/vesper-ai-flipper-kit
+**Repository:** https://github.com/desmond-digital-services/redwand-ai-flipper-kit
 **Owner:** desmond-digital-services
 **Visibility:** Public
 **Branch:** main
-**Git URL:** git@github.com:desmond-digital-services/vesper-ai-flipper-kit.git
-**Clone URL:** https://github.com/desmond-digital-services/vesper-ai-flipper-kit.git
+**Git URL:** git@github.com:desmond-digital-services/redwand-ai-flipper-kit.git
+**Clone URL:** https://github.com/desmond-digital-services/redwand-ai-flipper-kit.git
 
 ---
 
@@ -43,7 +43,7 @@
 - index.html — Full product page (8 sections)
 - css/styles.css — 151 rules, 2 breakpoints
 - js/main.js — FAQ accordion + smooth scroll
-- assets/vesper-logo.svg — Logo (V letterform + "Vesper AI")
+- assets/redwand-logo.svg — Logo (V letterform + "RedWand")
 - docs/design-notes.md — Design decisions + Stripe integration points
 
 ### Email Automation (7 files, SMTP system)
@@ -181,7 +181,7 @@
 - [ ] Create setup video URL
 - [ ] Create troubleshooting page URL
 - [ ] Create privacy policy
-- [ ] Confirm Vesper APK location
+- [ ] Confirm RedWand APK location
 - [ ] Confirm OpenRouter model selection
 - [ ] Finalize return policy
 - [ ] Confirm warranty period
@@ -209,7 +209,7 @@
 ## File Structure (GitHub)
 
 ```
-vesper-ai-flipper-kit/
+redwand-ai-flipper-kit/
 ├── docs/                  # All documentation
 ├── web/                   # Landing page, admin dashboard
 │   ├── admin/
@@ -272,4 +272,4 @@ vesper-ai-flipper-kit/
 
 **All systems go.** 🚀
 
-When you say "DEPLOY", Vesper AI Flipper Kit goes live.
+When you say "DEPLOY", RedWand Flipper Kit goes live.

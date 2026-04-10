@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Vesper AI - Stripe Test Script
+RedWand - Stripe Test Script
 Creates test product, price, and checkout session
 """
 
@@ -17,21 +17,21 @@ api_version = os.getenv('STRIPE_API_VERSION', '2026-02-25')
 stripe.api_version = api_version
 
 print("=" * 60)
-print("Vesper AI - Stripe Integration Test")
+print("RedWand - Stripe Integration Test")
 print("=" * 60)
 print(f"API Version: {api_version}")
 print(f"Test Mode: Yes")
 print()
 
 # Step 1: Create Product
-print("Step 1: Creating Vesper AI Flipper Kit product...")
+print("Step 1: Creating RedWand Flipper Kit product...")
 try:
     product = stripe.Product.create(
-        name="Vesper AI Flipper Kit",
+        name="RedWand Flipper Kit",
         description="Flipper Zero + Phone bundle that lets users control security hardware in plain English",
         images=[],
         metadata={
-            'sku': 'VESPER-KIT-001',
+            'sku': 'REDWAND-KIT-001',
             'category': 'hardware',
             'build_time': '7-10 days'
         }
@@ -77,7 +77,7 @@ try:
         cancel_url='http://localhost:8765/cancel.html',
         customer_email='test@example.com',
         metadata={
-            'order_type': 'vesper_flipper_kit',
+            'order_type': 'redwand_flipper_kit',
             'build_time': '7-10 days',
             'test_order': 'true'
         }

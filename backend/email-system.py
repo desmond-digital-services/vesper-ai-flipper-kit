@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Vesper AI Email Automation System
+RedWand Email Automation System
 Automated customer notification system for Flipper Kit orders
 
 Supports:
@@ -10,7 +10,7 @@ Supports:
 - Delivery follow-up (Day 12-15)
 - Payment failed (as needed)
 
-Author: Vesper AI
+Author: RedWand
 Version: 1.0.0
 """
 
@@ -41,9 +41,9 @@ class Config:
     SMTP_USE_TLS = os.getenv('SMTP_USE_TLS', 'true').lower() == 'true'
     
     # Email Addresses
-    FROM_EMAIL = os.getenv('FROM_EMAIL', 'noreply@vespere.ai')
-    FROM_NAME = os.getenv('FROM_NAME', 'Vesper AI')
-    REPLY_TO = os.getenv('REPLY_TO', 'help@vespere.ai')
+    FROM_EMAIL = os.getenv('FROM_EMAIL', 'noreply@redwand.io')
+    FROM_NAME = os.getenv('FROM_NAME', 'RedWand')
+    REPLY_TO = os.getenv('REPLY_TO', 'help@redwand.io')
     
     # Paths
     BASE_DIR = Path(__file__).parent.parent
@@ -268,29 +268,29 @@ class EmailSender:
 # EMAIL SYSTEM
 # ============================================================================
 
-class VesperEmailSystem:
+class RedWandEmailSystem:
     """Main email automation system"""
     
     # Email type definitions
     EMAIL_TYPES = {
         'order_confirmation': {
             'template': 'order-confirmation',
-            'subject': 'Your Vesper AI Flipper Kit Order #{order_number} is Confirmed',
+            'subject': 'Your RedWand Flipper Kit Order #{order_number} is Confirmed',
             'description': 'Sent immediately on order'
         },
         'build_progress': {
             'template': 'build-progress',
-            'subject': 'Your Vesper AI Kit is Being Built',
+            'subject': 'Your RedWand Kit is Being Built',
             'description': 'Sent on Day 5 of production'
         },
         'shipped': {
             'template': 'shipped',
-            'subject': 'Your Vesper AI Kit Has Shipped! 📦',
+            'subject': 'Your RedWand Kit Has Shipped! 📦',
             'description': 'Sent when order ships (Day 8-10)'
         },
         'followup': {
             'template': 'followup',
-            'subject': "How's Your Vesper AI Kit Working?",
+            'subject': "How's Your RedWand Kit Working?",
             'description': 'Sent 2-4 days after delivery (Day 12-15)'
         },
         'payment_failed': {
@@ -405,9 +405,9 @@ class VesperEmailSystem:
             TRACKING_NUMBER=tracking_number,
             ESTIMATED_DELIVERY=delivery,
             TRACKING_URL=tracking_url,
-            SETUP_VIDEO_URL='https://vespere.ai/setup-video',
-            GUIDE_URL='https://vespere.ai/quick-start',
-            APP_URL='https://vespere.ai/app'
+            SETUP_VIDEO_URL='https://redwand.io/setup-video',
+            GUIDE_URL='https://redwand.io/quick-start',
+            APP_URL='https://redwand.io/app'
         )
         
         success, error = self.sender.send(customer_email, email_config['subject'], html)
@@ -434,7 +434,7 @@ class VesperEmailSystem:
         html = template.render(
             ORDER_NUMBER=order_id,
             CUSTOMER_NAME=customer_name,
-            REVIEW_URL='https://vespere.ai/review'
+            REVIEW_URL='https://redwand.io/review'
         )
         
         success, error = self.sender.send(customer_email, email_config['subject'], html)
@@ -461,7 +461,7 @@ class VesperEmailSystem:
             ERROR_REASON=error_reason,
             CUSTOMER_NAME=customer_name,
             CUSTOMER_EMAIL=customer_email,
-            RETRY_PAYMENT_URL=f'https://vespere.ai/payment-retry?order={order_id}'
+            RETRY_PAYMENT_URL=f'https://redwand.io/payment-retry?order={order_id}'
         )
         
         success, error = self.sender.send(customer_email, subject, html)
@@ -526,7 +526,7 @@ def main():
     """Command-line interface"""
     
     if len(sys.argv) < 2:
-        print("Vesper AI Email System")
+        print("RedWand Email System")
         print("Usage: python email-system.py <command> [options]")
         print("\nCommands:")
         print("  send-confirmation   <order_id> <name> <email> <date> <amount>")
@@ -539,7 +539,7 @@ def main():
         sys.exit(1)
     
     command = sys.argv[1].lower()
-    email_system = VesperEmailSystem()
+    email_system = RedWandEmailSystem()
     
     try:
         if command == 'send-confirmation':
@@ -575,8 +575,8 @@ def main():
         
         elif command == 'test':
             success, error = email_system.sender.send(
-                'test@vespere.ai',
-                'Test Email from Vesper AI',
+                'test@redwand.io',
+                'Test Email from RedWand',
                 '<h1>Test</h1><p>If you received this, the email system is working!</p>'
             )
             print(f"Test email: {'Sent' if success else error}")

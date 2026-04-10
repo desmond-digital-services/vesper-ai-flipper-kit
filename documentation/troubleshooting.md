@@ -1,4 +1,4 @@
-# Vesper AI Flipper Kit — Troubleshooting Guide
+# RedWand Flipper Kit — Troubleshooting Guide
 
 **What this guide covers:** Solving the most common issues customers run into.
 **How to use it:** Find the issue that matches what you're seeing, then try the steps in order.
@@ -62,36 +62,36 @@ If your Flipper was previously paired to this phone, it might be trying to recon
 
 If you've tried all four steps above and Bluetooth still won't pair, reach out:
 
-📧 **Email:** help@vespere.ai
+📧 **Email:** help@redwand.io
 Include: What phone model you're using, what you've tried, and any error messages you've seen.
 
 ---
 
-## Issue 2: Vesper App Won't Connect to Flipper
+## Issue 2: RedWand App Won't Connect to Flipper
 
-**What you see:** The Vesper app opens but shows "No device connected" or can't find your Flipper, even though Bluetooth is paired.
+**What you see:** The RedWand app opens but shows "No device connected" or can't find your Flipper, even though Bluetooth is paired.
 
 ### Step 1 — Confirm Bluetooth pairing is separate from app connection
 
-Bluetooth pairing (done in your phone's Settings) is different from the Vesper app connection. Both need to work.
+Bluetooth pairing (done in your phone's Settings) is different from the RedWand app connection. Both need to work.
 
 1. Go to **Settings > Bluetooth** on your phone
 2. Confirm your Flipper shows as **"Connected"** or "Paired" — not just "Available"
 3. If it shows as "Available" only, tap it to connect
 
-### Step 2 — Force quit and reopen the Vesper app
+### Step 2 — Force quit and reopen the RedWand app
 
-1. **On iPhone:** Swipe up from the bottom of the screen (or double-press the home button), find the Vesper app card, and swipe it away. Reopen the app.
-2. **On Android:** Tap the **square** button at the bottom of the screen, find the Vesper app card, and swipe it away. Reopen the app.
+1. **On iPhone:** Swipe up from the bottom of the screen (or double-press the home button), find the RedWand app card, and swipe it away. Reopen the app.
+2. **On Android:** Tap the **square** button at the bottom of the screen, find the RedWand app card, and swipe it away. Reopen the app.
 
-### Step 3 — Check that the Vesper app has Bluetooth permission
+### Step 3 — Check that the RedWand app has Bluetooth permission
 
 **On iPhone:**
-1. Go to **Settings > Vesper** (scroll down to find it)
+1. Go to **Settings > RedWand** (scroll down to find it)
 2. Confirm **Bluetooth** is turned on
 
 **On Android:**
-1. Go to **Settings > Apps > Vesper**
+1. Go to **Settings > Apps > RedWand**
 2. Tap **Permissions**
 3. Confirm **Bluetooth** is allowed
 
@@ -102,11 +102,11 @@ If Step 3 doesn't resolve it, a full phone restart often clears up Bluetooth per
 1. Power off your phone completely
 2. Wait 10 seconds
 3. Power it back on
-4. Open the Vesper app and try again
+4. Open the RedWand app and try again
 
 ### Step 5 — Contact support
 
-📧 **Email:** help@vespere.ai
+📧 **Email:** help@redwand.io
 Include: Your phone model, what you've tried, and any screenshots if possible.
 
 ---
@@ -135,7 +135,7 @@ API keys are long. It's easy to miss the first or last character.
 
 If you have multiple API keys (from different services), it's easy to paste the wrong one.
 
-- Confirm the key you're pasting into Vesper starts with `sk-or-v1-`
+- Confirm the key you're pasting into RedWand starts with `sk-or-v1-`
 - Other providers' keys often start differently (e.g., `sk-` for OpenAI, `AIx` for others)
 
 ### Step 4 — Check your OpenRouter credit balance
@@ -148,7 +148,7 @@ Getting more credits is usually fast — add a small amount and try again.
 
 ### Step 5 — Contact support
 
-📧 **Email:** help@vespere.ai
+📧 **Email:** help@redwand.io
 Include: The exact error message you're seeing, whether the key works on openrouter.ai directly, and your phone type.
 
 ---
@@ -184,7 +184,7 @@ If the battery is very low, some cables or power sources may not deliver enough 
 
 If the screen still doesn't turn on after charging for 30 minutes and trying a force restart:
 
-📧 **Email:** help@vespere.ai
+📧 **Email:** help@redwand.io
 Include: Whether the device got wet or was dropped, any error messages seen before it stopped working, and what you've already tried.
 
 ---
@@ -217,7 +217,7 @@ If you're using the Flipper while charging, the battery may charge slowly or not
 
 ### Step 4 — Contact support
 
-📧 **Email:** help@vespere.ai
+📧 **Email:** help@redwand.io
 
 ---
 
@@ -227,11 +227,11 @@ Here are the error messages you might see and what they mean:
 
 ### "Device not found"
 
-**What it means:** The Vesper app can't see your Flipper.
+**What it means:** The RedWand app can't see your Flipper.
 **Try this:**
 1. Make sure Bluetooth is turned on in your phone settings
 2. Make sure your Flipper is powered on
-3. Try force quitting and reopening the Vesper app
+3. Try force quitting and reopening the RedWand app
 4. Restart your phone
 
 ---
@@ -242,7 +242,7 @@ Here are the error messages you might see and what they mean:
 **Try this:**
 1. Double-check the key on openrouter.ai — make sure you copied the whole thing
 2. Check that your OpenRouter account has credits
-3. Try deleting the key and re-entering it in the Vesper app
+3. Try deleting the key and re-entering it in the RedWand app
 
 ---
 
@@ -262,7 +262,7 @@ Here are the error messages you might see and what they mean:
 **Try this:**
 1. Move your phone closer to the Flipper
 2. Turn Bluetooth off and back on
-3. Restart the Vesper app
+3. Restart the RedWand app
 4. If other devices are connected to the same Flipper, disconnect them first
 
 ---
@@ -290,11 +290,11 @@ Contact us if:
 
 **How to reach us:**
 
-📧 **Email:** help@vespere.ai
+📧 **Email:** help@redwand.io
 We reply within **24 hours** on business days.
 
 **When you email us, please include:**
-1. What product you have (Vesper AI Flipper Kit)
+1. What product you have (RedWand Flipper Kit)
 2. What phone or tablet you're using (model name)
 3. What step you're on when the issue happens
 4. What you've already tried
@@ -316,4 +316,4 @@ We reply within **24 hours** on business days.
 
 ---
 
-*Stuck? We're here to help. Email help@vespere.ai — we typically reply within one business day.*
+*Stuck? We're here to help. Email help@redwand.io — we typically reply within one business day.*

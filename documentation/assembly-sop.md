@@ -1,6 +1,6 @@
-# Vesper AI Flipper Kit — Assembly SOP (For TD)
+# RedWand Flipper Kit — Assembly SOP (For TD)
 
-**Purpose:** Step-by-step guide for assembling and configuring each Vesper AI Flipper Kit before it ships to a customer.
+**Purpose:** Step-by-step guide for assembling and configuring each RedWand Flipper Kit before it ships to a customer.
 
 **Time Estimate:** 20–30 minutes per kit
 **Performed by:** TD or authorized assembler
@@ -16,7 +16,7 @@ Gather the following before starting:
 - [ ] Moto G Play phone (or equivalent Android device — provisioned per kit)
 - [ ] USB-A to USB-C cable (for Flipper charging/data)
 - [ ] USB-A to micro-USB cable (for Moto G charging)
-- [ ] Vesper APK installer file (latest build, provided by developer)
+- [ ] RedWand APK installer file (latest build, provided by developer)
 - [ ] FAT32 formatting tool (see Step 1)
 - [ ] Customer API key (generated during customer onboarding) — **leave blank for customer to enter**
 - [ ] Factory reset completed (per Step 7)
@@ -84,9 +84,9 @@ sudo dosfslabel /dev/sdX1 flipper
 
 ---
 
-## Step 3: Sideload Vesper APK onto Moto G Play
+## Step 3: Sideload RedWand APK onto Moto G Play
 
-The Moto G Play phone comes pre-loaded with the Vesper app. Use this step if you need to reinstall or update it.
+The Moto G Play phone comes pre-loaded with the RedWand app. Use this step if you need to reinstall or update it.
 
 ### Enable Developer Mode on Moto G Play:
 
@@ -110,7 +110,7 @@ The Moto G Play phone comes pre-loaded with the Vesper app. Use this step if you
 adb devices
 # You should see your device listed
 
-adb install vesper-app.apk
+adb install redwand-app.apk
 # Wait for "Success" message
 ```
 
@@ -118,14 +118,14 @@ adb install vesper-app.apk
 1. Connect Moto G Play to your computer via USB cable
 2. On the phone, swipe down from the top and select **"USB for charging"**
 3. Tap to change it to **"File Transfer"**
-4. Copy the `vesper-app.apk` file to the phone's Downloads folder
+4. Copy the `redwand-app.apk` file to the phone's Downloads folder
 5. On the phone, open **Files** or **Downloads**
 6. Tap the APK file
 7. If prompted, tap **"Install anyway"** (the phone may warn about unknown apps — this is normal for sideloaded apps)
 8. Wait for installation to complete
 9. Tap **"Open"** once done
 
-**Verify installation:** Find the Vesper app icon in your app drawer. Tap it to confirm it opens.
+**Verify installation:** Find the RedWand app icon in your app drawer. Tap it to confirm it opens.
 
 ---
 
@@ -161,7 +161,7 @@ Confirm that the Flipper's Bluetooth Low Energy (BLE) connection is functioning.
    - Open **Settings > Bluetooth**
    - Confirm the Flipper appears in the device list (named something like `Flipper-XXXX`)
    - Tap to **Pair** and confirm pairing succeeds
-5. In the Vesper app on the Moto G Play:
+5. In the RedWand app on the Moto G Play:
    - Open the app
    - Confirm the app detects the paired Flipper
    - Attempt to **Connect** from within the app
@@ -170,7 +170,7 @@ Confirm that the Flipper's Bluetooth Low Energy (BLE) connection is functioning.
 **Verification checklist:**
 - [ ] Flipper visible in phone's Bluetooth settings
 - [ ] Pairing succeeds without error
-- [ ] Vesper app connects to Flipper
+- [ ] RedWand app connects to Flipper
 - [ ] Connection does not drop during normal use
 
 > **FAIL condition:** If the app cannot connect or the connection drops repeatedly, check battery level and try again. If the issue persists, do not ship the unit.
@@ -181,7 +181,7 @@ Confirm that the Flipper's Bluetooth Low Energy (BLE) connection is functioning.
 
 Use a test API key to verify the AI integration works end-to-end. **Do not enter the customer's key during assembly.**
 
-1. In the Vesper app, go to **Settings** or **API Configuration**
+1. In the RedWand app, go to **Settings** or **API Configuration**
 2. Enter a test OpenRouter API key (provided internally for QA)
 3. Tap **Save** or **Connect**
 4. Confirm the app shows **"Connected"** or **"Ready"**
@@ -243,7 +243,7 @@ Complete this checklist before sealing and shipping the kit.
 
 ### Moto G Play Phone:
 - [ ] Factory reset confirmed — no Google account, no personal data
-- [ ] Vesper APK installed and opens correctly
+- [ ] RedWand APK installed and opens correctly
 - [ ] USB debugging enabled (optional but helpful for customer support)
 - [ ] Screen turns on with no errors
 - [ ] No visible cracks or damage

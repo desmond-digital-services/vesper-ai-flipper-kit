@@ -1,4 +1,4 @@
-# Vesper AI - Quick Reference for TD
+# RedWand - Quick Reference for TD
 
 **Date:** 2026-04-08 17:45 CDT
 **Status:** TESTING COMPLETE - AWAITING YOUR APPROVAL
@@ -10,7 +10,7 @@
 ### Services
 - ✅ Static web server: http://localhost:8765
 - ✅ Flask API server: http://localhost:5050
-- ✅ Database: ~/clawd/projects/vesper-ai/database/vesper.db
+- ✅ Database: ~/clawd/projects/redwand-ai/database/redwand.db
 
 ### Access URLs
 - Landing page: http://localhost:8765
@@ -177,7 +177,7 @@
 
 ## Virtual Environment
 
-**Location:** ~/clawd/projects/vesper-ai/venv
+**Location:** ~/clawd/projects/redwand-ai/venv
 **Activate:** `source venv/bin/activate`
 **Deactivate:** `deactivate`
 
@@ -195,7 +195,7 @@
 ps aux | grep "8765"
 
 # Restart if needed:
-cd ~/clawd/projects/vesper-ai
+cd ~/clawd/projects/redwand-ai
 python3 -m http.server 8765
 ```
 
@@ -205,7 +205,7 @@ python3 -m http.server 8765
 ps aux | grep "5050"
 
 # Restart if needed:
-cd ~/clawd/projects/vesper-ai/backend
+cd ~/clawd/projects/redwand-ai/backend
 source ../venv/bin/activate
 python3 order-manager.py
 ```
@@ -237,7 +237,7 @@ curl -X POST http://localhost:5050/api/orders \
 
 ### Check Database
 ```bash
-sqlite3 ~/clawd/projects/vesper-ai/database/vesper.db "SELECT * FROM orders;"
+sqlite3 ~/clawd/projects/redwand-ai/database/redwand.db "SELECT * FROM orders;"
 ```
 
 ---

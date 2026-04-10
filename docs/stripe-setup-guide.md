@@ -1,4 +1,4 @@
-# Stripe Setup Guide for Vesper AI Flipper Kit
+# Stripe Setup Guide for RedWand Flipper Kit
 
 ## Step 1: Get Stripe API Keys
 
@@ -14,8 +14,8 @@
 1. Go to https://dashboard.stripe.com/products
 2. Click "Add product"
 3. Fill in product details:
-   - **Name:** Vesper AI Flipper Kit
-   - **Description:** Talk to your hardware in plain English. Includes Flipper Zero, Moto G Play, and pre-installed Vesper app.
+   - **Name:** RedWand Flipper Kit
+   - **Description:** Talk to your hardware in plain English. Includes Flipper Zero, Moto G Play, and pre-installed RedWand app.
    - **Pricing:** Single price, $499.00
    - **Currency:** USD
 4. Click "Create product"
@@ -25,7 +25,7 @@
 ```bash
 # Create product
 stripe products create \
-  --name "Vesper AI Flipper Kit" \
+  --name "RedWand Flipper Kit" \
   --description "Talk to your hardware in plain English" \
   --default-price-data '{"currency": "usd", "unit_amount": 49900}'
 ```
@@ -34,7 +34,7 @@ stripe products create \
 
 1. Go to https://dashboard.stripe.com/webhooks
 2. Click "Add endpoint"
-3. Enter webhook URL: `https://vespere.ai/webhook`
+3. Enter webhook URL: `https://redwand.io/webhook`
    - For local testing, use: `https://your-tunnel-url.ngrok.io/webhook`
 4. Select events to listen for:
    - ✅ checkout.session.completed
@@ -50,8 +50,8 @@ Create a `.env` file in the backend directory:
 STRIPE_SECRET_KEY=sk_test_1234567890abcdef
 STRIPE_PUBLISHABLE_KEY=pk_test_1234567890abcdef
 STRIPE_WEBHOOK_SECRET=whsec_1234567890abcdef
-STRIPE_SUCCESS_URL=https://vespere.ai/success
-STRIPE_CANCEL_URL=https://vespere.ai/cancel
+STRIPE_SUCCESS_URL=https://redwand.io/success
+STRIPE_CANCEL_URL=https://redwand.io/cancel
 STRIPE_TEST_MODE=true
 ```
 
@@ -65,7 +65,7 @@ Use Stripe test card:
 
 ### 2. Run Checkout Generator
 ```bash
-cd ~/clawd/projects/vesper-ai/backend
+cd ~/clawd/projects/redwand-ai/backend
 python3 create-checkout.py
 ```
 

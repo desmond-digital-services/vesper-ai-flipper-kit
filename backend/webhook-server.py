@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Vesper AI - Webhook Handler for Stripe Events
+RedWand - Webhook Handler for Stripe Events
 """
 
 import stripe
@@ -100,7 +100,7 @@ def handle_payment_succeeded(payment_intent):
 
 if __name__ == '__main__':
     print("=" * 60)
-    print("Vesper AI - Webhook Server")
+    print("RedWand - Webhook Server")
     print("=" * 60)
     print(f"Listening on: http://localhost:5050/api/webhook")
     print(f"Stripe Secret: {'✓ Configured' if endpoint_secret else '⚠️  Not configured'}")

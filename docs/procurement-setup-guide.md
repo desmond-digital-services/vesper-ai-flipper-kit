@@ -1,8 +1,8 @@
-# Vesper AI Flipper Kit Procurement Setup Guide
+# RedWand Flipper Kit Procurement Setup Guide
 
 ## Overview
 
-This automation system manages procurement for the Vesper AI Flipper Kit components across multiple suppliers:
+This automation system manages procurement for the RedWand Flipper Kit components across multiple suppliers:
 - **Flipper Zero** ($199) - Main device
 - **Moto G Play 2026** ($130) - Companion phone
 - **32GB SD Card** ($8) - Storage
@@ -10,7 +10,7 @@ This automation system manages procurement for the Vesper AI Flipper Kit compone
 ## Project Structure
 
 ```
-vesper-ai/
+redwand-ai/
 ├── automation/
 │   ├── config.py              # Configuration (products, suppliers, notifications)
 │   ├── micro-center-order.py  # Micro Center ordering & stock checks
@@ -191,13 +191,13 @@ python automation/order-tracker.py summary
 crontab -e
 
 # Add this line:
-0 8 * * * cd /path/to/vesper-ai/automation && python stock-checker.py check --quiet >> /path/to/vesper-ai/logs/cron.log 2>&1
+0 8 * * * cd /path/to/redwand-ai/automation && python stock-checker.py check --quiet >> /path/to/redwand-ai/logs/cron.log 2>&1
 ```
 
 ### Weekly Full Report (Monday 9 AM)
 
 ```bash
-0 9 * * 1 cd /path/to/vesper-ai/automation && python stock-checker.py report --save ../reports/stock-$(date +\%Y-\%m-\%d).json
+0 9 * * 1 cd /path/to/redwand-ai/automation && python stock-checker.py report --save ../reports/stock-$(date +\%Y-\%m-\%d).json
 ```
 
 ## Email Templates

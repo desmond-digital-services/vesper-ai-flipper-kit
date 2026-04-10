@@ -1,4 +1,4 @@
-# Vesper AI Flipper Kit — Instruction Card Design Spec
+# RedWand Flipper Kit — Instruction Card Design Spec
 
 **Document type:** Design specification for printed quick-start card
 **Card size:** 3.5 inches × 2 inches (standard business card size, landscape orientation)
@@ -25,7 +25,7 @@ The card is not the full manual — it's a cheat sheet with QR codes for everyth
 
 **Top zone — Logo and tagline (top 30% of card):**
 
-- **Logo:** Vesper logo — centered, approximately 1 inch wide
+- **Logo:** RedWand logo — centered, approximately 1 inch wide
 - **Tagline below logo:** *"Your AI, in your hand."* in a clean sans-serif font
 - **Product name below tagline:** "AI Flipper Kit" in a smaller, lighter weight
 
@@ -40,7 +40,7 @@ A numbered checklist, bold and scannable. Large font — customer should be able
 ```
 1.  Switch battery ON
 2.  Connect via Bluetooth
-3.  Open the Vesper app
+3.  Open the RedWand app
 4.  Add your API key
 5.  Say "Read this card"
 ```
@@ -85,8 +85,8 @@ A numbered checklist, bold and scannable. Large font — customer should be able
 
 **Top zone — Support Information (top 50% of card):**
 
-- **Email:** help@vespere.ai (large, bold, easy to read)
-- **Website:** vespere.ai (below email)
+- **Email:** help@redwand.io (large, bold, easy to read)
+- **Website:** redwand.io (below email)
 - **Support hours:** "We reply within 24 hours" (small, below website)
 
 **Visual:** Clean, centered. White background with dark text. Simple and trustworthy.
@@ -108,7 +108,7 @@ Small, subtle text. Does not need to be prominent — just present.
 ```
 Use responsibly. Do not use to access systems,
 networks, or data you don't have permission to use.
-See vespere.ai/responsible-use for full policy.
+See redwand.io/responsible-use for full policy.
 ```
 
 **Font size:** 6–7pt. Use a light gray (#888888) so it's there but not alarming.
@@ -154,7 +154,7 @@ See vespere.ai/responsible-use for full policy.
 ┌─────────────────────────────────────────────────────────┐
 │ ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓ │  ← Dark charcoal band
 │                                                         │
-│              [VESPER LOGO]                             │
+│              [REDWAND LOGO]                             │
 │          "Your AI, in your hand."                      │
 │              AI Flipper Kit                            │
 │                                                         │
@@ -162,7 +162,7 @@ See vespere.ai/responsible-use for full policy.
 │                                                         │
 │                   1.  Switch battery ON                 │
 │                   2.  Connect via Bluetooth            │
-│                   3.  Open the Vesper app              │
+│                   3.  Open the RedWand app              │
 │                   4.  Add your API key                  │
 │                   5.  Say "Read this card"              │
 │                                                         │
@@ -185,8 +185,8 @@ See vespere.ai/responsible-use for full policy.
 ┌─────────────────────────────────────────────────────────┐
 │                                                         │
 │                                                         │
-│                  help@vespere.ai                       │
-│                   vespere.ai                           │
+│                  help@redwand.io                       │
+│                   redwand.io                           │
 │            We reply within 24 hours.                   │
 │                                                         │
 │                                                         │
@@ -201,7 +201,7 @@ See vespere.ai/responsible-use for full policy.
 │                                                         │
 │   Use responsibly. Do not use to access systems,       │
 │   networks, or data you don't have permission to use. │
-│   See vespere.ai/responsible-use for full policy.    │
+│   See redwand.io/responsible-use for full policy.    │
 │                                                         │
 └─────────────────────────────────────────────────────────┘
 ```
@@ -212,9 +212,9 @@ See vespere.ai/responsible-use for full policy.
 
 | QR Code | Destination URL | Notes |
 |---------|-----------------|-------|
-| Front — Setup Video | `https://vespere.ai/setup-video` | Host a video walkthrough here |
-| Front — Need Help? | `https://vespere.ai/troubleshooting` | Link to troubleshooting page |
-| Back — Full Guide | `https://vespere.ai/docs` | Link to all documentation |
+| Front — Setup Video | `https://redwand.io/setup-video` | Host a video walkthrough here |
+| Front — Need Help? | `https://redwand.io/troubleshooting` | Link to troubleshooting page |
+| Back — Full Guide | `https://redwand.io/docs` | Link to all documentation |
 
 > **URLs above are placeholders.** Confirm final URLs with your web team before sending to print.
 
@@ -243,4 +243,4 @@ Before sending to print, confirm:
 
 ---
 
-*Questions about the design spec? Reach out to help@vespere.ai*
+*Questions about the design spec? Reach out to help@redwand.io*
